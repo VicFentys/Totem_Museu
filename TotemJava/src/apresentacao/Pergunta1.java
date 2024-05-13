@@ -1,14 +1,17 @@
 package apresentacao;
 
-import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
-import javax.swing.*;
+import totemjava.*;
 
 public class Pergunta1 extends javax.swing.JDialog {
-
+    
+    private TecladoVirtual tecladoVirtual;
+    
     public Pergunta1(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+        super(parent, false);
         initComponents();
+        tecladoVirtual = new TecladoVirtual();
     }
 
     @SuppressWarnings("unchecked")
@@ -18,7 +21,7 @@ public class Pergunta1 extends javax.swing.JDialog {
         txt1 = new javax.swing.JLabel();
         txt2 = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
-        txfResposta1 = new javax.swing.JTextField();
+        txfResposta = new javax.swing.JTextField();
         btnEnviar = new javax.swing.JButton();
         btnTeclado = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
@@ -49,14 +52,14 @@ public class Pergunta1 extends javax.swing.JDialog {
         txt3.setText("Opção 1    /    Opção 2    /    Opção 3");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 800, -1));
 
-        txfResposta1.setBackground(new java.awt.Color(37, 29, 58));
-        txfResposta1.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
-        txfResposta1.setForeground(new java.awt.Color(140, 140, 140));
-        txfResposta1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txfResposta1.setText("Clique no botão de teclado para digitar sua resposta");
-        txfResposta1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(224, 77, 1)));
-        txfResposta1.setFocusable(false);
-        getContentPane().add(txfResposta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 600, 40));
+        txfResposta.setBackground(new java.awt.Color(37, 29, 58));
+        txfResposta.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txfResposta.setForeground(new java.awt.Color(140, 140, 140));
+        txfResposta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
+        txfResposta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(224, 77, 1)));
+        txfResposta.setFocusable(false);
+        getContentPane().add(txfResposta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 600, 40));
 
         btnEnviar.setBackground(new java.awt.Color(224, 77, 1));
         btnEnviar.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
@@ -143,13 +146,6 @@ public class Pergunta1 extends javax.swing.JDialog {
         btnEnviar.setBackground(new Color(224, 77, 1));
     }//GEN-LAST:event_btnEnviarMouseExited
 
-    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
-        if (txfResposta1.getText().isEmpty() || txfResposta1.getText().equals("Clique no botão de teclado para digitar sua resposta")){
-            Erro erro = new Erro(null, true);
-            erro.setVisible(true);
-        }
-    }//GEN-LAST:event_btnEnviarActionPerformed
-
     private void btnTecladoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseEntered
         btnTeclado.setBackground(new Color(255, 119, 0));
     }//GEN-LAST:event_btnTecladoMouseEntered
@@ -157,10 +153,6 @@ public class Pergunta1 extends javax.swing.JDialog {
     private void btnTecladoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseExited
         btnTeclado.setBackground(new Color(224, 77, 1));
     }//GEN-LAST:event_btnTecladoMouseExited
-
-    private void btnTecladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTecladoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnTecladoActionPerformed
 
     private void btnSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseEntered
         btnSair.setBackground(new Color(255, 119, 0));
@@ -174,13 +166,28 @@ public class Pergunta1 extends javax.swing.JDialog {
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+        
+        if (!txfResposta.getText().trim().equals("opção 1") || !txfResposta.getText().trim().equals("opção 2") || !txfResposta.getText().trim().equals("opção 3")){
+            
+            Erro erro = new Erro(null, true);
+            erro.setVisible(true);
+        }
+    }//GEN-LAST:event_btnEnviarActionPerformed
+
+    private void btnTecladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTecladoActionPerformed
+
+        txfResposta.setFocusable(true);
+        txfResposta.setText("");
+        txfResposta.setForeground(new Color(239,236,236));
+        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 24));
+        tecladoVirtual.setTextFieldAtual(txfResposta);
+        tecladoVirtual.mostrar();
+    }//GEN-LAST:event_btnTecladoActionPerformed
+  
     public static void main(String args[]) {
         
-        try {
-            UIManager.setLookAndFeel( new FlatDarkLaf() );
-        } catch( Exception e ) {
-            System.err.println( "Failed to initialize LaF" );
-        }
+        FlatArcDarkOrangeIJTheme.setup();
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -202,7 +209,7 @@ public class Pergunta1 extends javax.swing.JDialog {
     private javax.swing.JButton btnEnviar;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnTeclado;
-    private javax.swing.JTextField txfResposta1;
+    private javax.swing.JTextField txfResposta;
     private javax.swing.JLabel txt1;
     private javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;

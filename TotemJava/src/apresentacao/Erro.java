@@ -22,6 +22,7 @@ public class Erro extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("RESPOSTA INVÁLIDA");
+        setAlwaysOnTop(true);
         setMaximumSize(new java.awt.Dimension(320, 150));
         setMinimumSize(new java.awt.Dimension(320, 150));
         setResizable(false);
