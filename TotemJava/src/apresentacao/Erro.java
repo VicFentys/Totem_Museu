@@ -1,8 +1,7 @@
 package apresentacao;
 
-import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
-import javax.swing.*;
 
 public class Erro extends javax.swing.JDialog {
 
@@ -33,8 +32,8 @@ public class Erro extends javax.swing.JDialog {
         txt1.setText("<html>\n<div style= 'text-align: center'>\n<p>Digite uma das opções <br/>\n<p style='margin-top: 10'>de resposta");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
-        marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte2.png"))); // NOI18N
-        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+        marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/rover.png"))); // NOI18N
+        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         btnOk.setBackground(new java.awt.Color(224, 77, 1));
         btnOk.setFont(new java.awt.Font("Nasalization Rg", 1, 18)); // NOI18N
@@ -83,11 +82,7 @@ public class Erro extends javax.swing.JDialog {
 
     public static void main(String args[]) {
 
-        try {
-            UIManager.setLookAndFeel( new FlatDarkLaf() );
-        } catch( Exception ex ) {
-            System.err.println( "Failed to initialize LaF" );
-        }
+        FlatArcDarkOrangeIJTheme.setup();
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -42,7 +42,7 @@ public class TecladoVirtual {
                     button.setPreferredSize(new Dimension(70, 50)); // Aumenta o tamanho dos outros botões
                 }
                 
-                button.addActionListener(new ActionListener() {
+                button.addActionListener(new ActionListener() { // funcionalidade dos botões
                     public void actionPerformed(ActionEvent e) {
                         String actionCommand = e.getActionCommand();
                         if (textFieldAtual != null) {
@@ -64,7 +64,6 @@ public class TecladoVirtual {
             }
             frame.add(panel);
         }
-
         frame.pack();
     }
     
@@ -74,5 +73,9 @@ public class TecladoVirtual {
 
     public void mostrar() {
         frame.setVisible(true);
+    }
+    
+    public void fechar() {
+        frame.setVisible(false);
     }
 }

@@ -1,14 +1,14 @@
 package apresentacao;
 
-import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
-import javax.swing.*;
 
 public class Resultado extends javax.swing.JDialog {
 
-    public Resultado(java.awt.Frame parent, boolean modal) {
+    public Resultado(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
         super(parent, modal);
         initComponents();
+        txtContagem.setText("" + resCorretaTotal);
     }
 
     @SuppressWarnings("unchecked")
@@ -38,13 +38,13 @@ public class Resultado extends javax.swing.JDialog {
         txt2.setFont(new java.awt.Font("OCR A Extended", 1, 36)); // NOI18N
         txt2.setForeground(new java.awt.Color(239, 236, 236));
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt2.setText("Respostas corretas:");
+        txt2.setText("Total de acertos:");
         getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 800, -1));
 
         txtContagem.setFont(new java.awt.Font("Nasalization Rg", 1, 60)); // NOI18N
         txtContagem.setForeground(new java.awt.Color(239, 236, 236));
         txtContagem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtContagem.setText("3");
+        txtContagem.setText("0");
         getContentPane().add(txtContagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 800, -1));
 
         btnInicio.setBackground(new java.awt.Color(224, 77, 1));
@@ -93,8 +93,9 @@ public class Resultado extends javax.swing.JDialog {
         });
         getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, 160, -1));
 
-        background.setIcon(new javax.swing.ImageIcon("C:\\Users\\vihug\\OneDrive\\Documentos\\GitHub\\Totem_Museu\\JavaTotem\\src\\main\\java\\imagens\\background.jpg")); // NOI18N
-        background.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
+        background.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         background.setMaximumSize(new java.awt.Dimension(800, 600));
         background.setMinimumSize(new java.awt.Dimension(800, 600));
         background.setPreferredSize(new java.awt.Dimension(800, 600));
@@ -105,8 +106,7 @@ public class Resultado extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
-        Iniciar iniciar = new Iniciar(null, true);
-        iniciar.setVisible(true);
+        new Iniciar(null, true).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnInicioActionPerformed
 
@@ -132,16 +132,12 @@ public class Resultado extends javax.swing.JDialog {
 
     public static void main(String args[]) {
         
-        try {
-            UIManager.setLookAndFeel( new FlatDarkLaf() );
-        } catch( Exception e ) {
-            System.err.println( "Failed to initialize LaF" );
-        }
+        FlatArcDarkOrangeIJTheme.setup();
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Resultado dialog = new Resultado(new javax.swing.JFrame(), true);
+                Resultado dialog = new Resultado(new javax.swing.JFrame(), true, 0);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

@@ -1,14 +1,16 @@
 package apresentacao;
 
-import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
-import javax.swing.*;
 
 public class Correta extends javax.swing.JDialog {
+    
+    int resCorretas = 0;
 
-    public Correta(java.awt.Frame parent, boolean modal) {
+    public Correta(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
         super(parent, modal);
         initComponents();
+        this.resCorretas = resCorretaTotal;
     }
 
     @SuppressWarnings("unchecked")
@@ -80,7 +82,10 @@ public class Correta extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProximaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximaActionPerformed
-        // TODO add your handling code here:
+        
+        Pergunta2 pergunta2 = new Pergunta2(null, false, resCorretas);
+        pergunta2.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnProximaActionPerformed
 
     private void btnProximaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProximaMouseEntered
@@ -93,16 +98,12 @@ public class Correta extends javax.swing.JDialog {
 
     public static void main(String args[]) {
         
-        try {
-            UIManager.setLookAndFeel( new FlatDarkLaf() );
-        } catch( Exception e ) {
-            System.err.println( "Failed to initialize LaF" );
-        }
+        FlatArcDarkOrangeIJTheme.setup();
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Correta dialog = new Correta(new javax.swing.JFrame(), true);
+                Correta dialog = new Correta(new javax.swing.JFrame(), true, 0);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -118,7 +119,7 @@ public class Correta extends javax.swing.JDialog {
     private javax.swing.JLabel background;
     private javax.swing.JButton btnProxima;
     private javax.swing.JLabel txt1;
-    private javax.swing.JLabel txt2;
+    protected javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;
     // End of variables declaration//GEN-END:variables
 }

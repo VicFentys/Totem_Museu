@@ -1,8 +1,7 @@
 package apresentacao;
 
-import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
-import javax.swing.*;
 
 public class Iniciar extends javax.swing.JDialog {
 
@@ -135,11 +134,7 @@ public class Iniciar extends javax.swing.JDialog {
 
     public static void main(String args[]) {
         
-        try {
-            UIManager.setLookAndFeel( new FlatDarkLaf() );
-        } catch( Exception e ) {
-            System.err.println( "Failed to initialize LaF" );
-        }
+        FlatArcDarkOrangeIJTheme.setup();
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
