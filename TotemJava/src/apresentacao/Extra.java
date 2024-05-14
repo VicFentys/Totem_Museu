@@ -4,16 +4,15 @@ import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
 import totemjava.*;
 
-public class Pergunta3 extends javax.swing.JDialog {
+public class Extra extends javax.swing.JDialog {
     
     private TecladoVirtual tecladoVirtual; // Define a classe construtora do teclado virtual
     int resCorretas = 0; // Variável global que será usada como contador de respostas corretas durante a aplicação
     
-    public Pergunta3(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
+    public Extra(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
         super(parent, false);
         initComponents();
         this.resCorretas = resCorretaTotal; // Define o valor atual de respostas corretas
-        txtContagem.setText("" + resCorretaTotal); // Configura o valor da label para mostrar a quantidade de respostas corretas
         tecladoVirtual = new TecladoVirtual(); // Chama a classe construtora teclado virtual
     }
 
@@ -22,14 +21,11 @@ public class Pergunta3 extends javax.swing.JDialog {
     private void initComponents() {
 
         txt1 = new javax.swing.JLabel();
-        txt2 = new javax.swing.JLabel();
-        txtContagem = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
-        txt5 = new javax.swing.JLabel();
-        txt6 = new javax.swing.JLabel();
-        txt7 = new javax.swing.JLabel();
-        txfResposta = new javax.swing.JTextField();
+        btnVoltar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txfResposta = new javax.swing.JTextArea();
         btnEnviar = new javax.swing.JButton();
         btnTeclado = new javax.swing.JButton();
         background = new javax.swing.JLabel();
@@ -42,58 +38,58 @@ public class Pergunta3 extends javax.swing.JDialog {
 
         txt1.setFont(new java.awt.Font("Nasalization Rg", 0, 30)); // NOI18N
         txt1.setForeground(new java.awt.Color(255, 119, 0));
-        txt1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt1.setText("TERCEIRA PERGUNTA");
-        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 350, -1));
-
-        txt2.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
-        txt2.setForeground(new java.awt.Color(224, 77, 1));
-        txt2.setText("Acertos:");
-        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
-
-        txtContagem.setFont(new java.awt.Font("Nasalization Rg", 1, 24)); // NOI18N
-        txtContagem.setForeground(new java.awt.Color(224, 77, 1));
-        txtContagem.setText("0");
-        getContentPane().add(txtContagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 20, -1));
+        txt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt1.setText("SUGESTÕES & COMENTÁRIOS");
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 800, -1));
 
         txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual desses robôs exploradores não está mais<br/>\n<p style='margin-top: 10'>operacional em Marte?\n");
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Caso tenha alguma observação, ou gostaria de apontar<br/>\n<p style='margin-top: 8'>possíveis mudanças referente a nossa\n<p style='margin-top: 8'>exposição, digite no campo abaixo.\n<p style='margin-top: 8'>Agradecemos seu tempo!");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
-        txt4.setForeground(new java.awt.Color(239, 236, 236));
-        txt4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt4.setText("<html>\n<b>1)</b> Perseverance");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 180, -1));
+        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        txt4.setForeground(new java.awt.Color(0, 204, 0));
+        txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 170, -1));
 
-        txt5.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
-        txt5.setForeground(new java.awt.Color(239, 236, 236));
-        txt5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt5.setText("<html>\n<b>2)</b> Curiosity");
-        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 170, -1));
+        btnVoltar.setBackground(new java.awt.Color(224, 77, 1));
+        btnVoltar.setFont(new java.awt.Font("Nasalization Rg", 1, 24)); // NOI18N
+        btnVoltar.setForeground(new java.awt.Color(37, 29, 58));
+        btnVoltar.setText("VOLTAR");
+        btnVoltar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnVoltar.setBorderPainted(false);
+        btnVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVoltar.setFocusPainted(false);
+        btnVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVoltarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVoltarMouseExited(evt);
+            }
+        });
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 120, 30));
 
-        txt6.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
-        txt6.setForeground(new java.awt.Color(239, 236, 236));
-        txt6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt6.setText("<html>\n<b>3)</b> Opportunity");
-        getContentPane().add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, -1));
-
-        txt7.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
-        txt7.setForeground(new java.awt.Color(239, 236, 236));
-        txt7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt7.setText("<html>\n<b>4)</b> Spirit");
-        getContentPane().add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 110, -1));
+        jScrollPane1.setBorder(null);
 
         txfResposta.setBackground(new java.awt.Color(37, 29, 58));
+        txfResposta.setColumns(20);
         txfResposta.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
         txfResposta.setForeground(new java.awt.Color(140, 140, 140));
-        txfResposta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txfResposta.setLineWrap(true);
+        txfResposta.setRows(4);
         txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
         txfResposta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(224, 77, 1)));
         txfResposta.setFocusable(false);
-        getContentPane().add(txfResposta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 600, 40));
+        jScrollPane1.setViewportView(txfResposta);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 600, 90));
 
         btnEnviar.setBackground(new java.awt.Color(224, 77, 1));
         btnEnviar.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
@@ -141,7 +137,7 @@ public class Pergunta3 extends javax.swing.JDialog {
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
-        background.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        background.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         background.setMaximumSize(new java.awt.Dimension(800, 600));
         background.setMinimumSize(new java.awt.Dimension(800, 600));
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -150,57 +146,72 @@ public class Pergunta3 extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEnviarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseEntered
-        btnEnviar.setBackground(new Color(255, 119, 0));
-    }//GEN-LAST:event_btnEnviarMouseEntered
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+
+        tecladoVirtual.fechar();
+        
+        if (txfResposta.getText().equals("") || 
+            txfResposta.getText().equals("Clique no botão de teclado para digitar sua resposta")) { // Mensagem de texto
+            
+            txt4.setForeground(new Color(255,0,0));
+            txt4.setText("<html>\n" +
+                         "<div style= 'text-align: center'>\n" +
+                         "<p>Nenhum valor<br/>\n" +
+                         "<p style='margin-top: 8'>digitado");
+        }
+        else {
+            txt4.setForeground(new Color(0,204,0));
+            txt4.setText("<html>\n" +
+                         "<div style= 'text-align: center'>\n" +
+                         "<p>Comentário enviado,<br/>\n" +
+                         "<p style='margin-top: 8'>obrigado!");
+        }
+        
+        txfResposta.setFocusable(false);
+        txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
+        txfResposta.setForeground(new Color(140,140,140));
+        txfResposta.setFont(new Font("OCR A Extended", Font.PLAIN, 18));
+    }//GEN-LAST:event_btnEnviarActionPerformed
 
     private void btnEnviarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseExited
         btnEnviar.setBackground(new Color(224, 77, 1));
     }//GEN-LAST:event_btnEnviarMouseExited
 
-    private void btnTecladoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseEntered
-        btnTeclado.setBackground(new Color(255, 119, 0));
-    }//GEN-LAST:event_btnTecladoMouseEntered
+    private void btnEnviarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseEntered
+        btnEnviar.setBackground(new Color(255, 119, 0));
+    }//GEN-LAST:event_btnEnviarMouseEntered
+
+    private void btnTecladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTecladoActionPerformed
+
+        txt4.setText("");
+        txfResposta.setFocusable(true);
+        txfResposta.setText("");
+        txfResposta.setForeground(new Color(239,236,236));
+        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 20));
+        tecladoVirtual.setTextAreaAtual(txfResposta); // Define o campo de texto como o atual
+        tecladoVirtual.mostrar(); // Abre o teclado virtual
+    }//GEN-LAST:event_btnTecladoActionPerformed
 
     private void btnTecladoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseExited
         btnTeclado.setBackground(new Color(224, 77, 1));
     }//GEN-LAST:event_btnTecladoMouseExited
 
-    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
-        
-        tecladoVirtual.fechar();
-        
-        if (txfResposta.getText().trim().equals("spirit")){
-            
-            resCorretas += 1; // Adiciona um ponto ao contador caso a resposta tenho sido correta
-            new Info3(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
-            this.dispose();
-        }
-        else if (txfResposta.getText().trim().equals("perseverance") || 
-                 txfResposta.getText().trim().equals("curiosity") || 
-                 txfResposta.getText().trim().equals("opportunity")){
-            
-            new Info3(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
-            this.dispose();
-        }
-        else {
-            new Erro(null, true).setVisible(true); // Chama a mensagem de erro
-            txfResposta.setFocusable(false);
-            txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
-            txfResposta.setForeground(new Color(140,140,140));
-            txfResposta.setFont(new Font("OCR A Extended", Font.PLAIN, 18));
-        }
-    }//GEN-LAST:event_btnEnviarActionPerformed
+    private void btnTecladoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseEntered
+        btnTeclado.setBackground(new Color(255, 119, 0));
+    }//GEN-LAST:event_btnTecladoMouseEntered
 
-    private void btnTecladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTecladoActionPerformed
+    private void btnVoltarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVoltarMouseEntered
+        btnVoltar.setBackground(new Color(255, 119, 0));
+    }//GEN-LAST:event_btnVoltarMouseEntered
 
-        txfResposta.setFocusable(true);
-        txfResposta.setText("");
-        txfResposta.setForeground(new Color(239,236,236));
-        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 24));
-        tecladoVirtual.setTextFieldAtual(txfResposta); // Define o campo de texto da Pergunta1 como o atual
-        tecladoVirtual.mostrar(); // Abre o teclado virtual
-    }//GEN-LAST:event_btnTecladoActionPerformed
+    private void btnVoltarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVoltarMouseExited
+        btnVoltar.setBackground(new Color(224, 77, 1));
+    }//GEN-LAST:event_btnVoltarMouseExited
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        new Resultado(null, true, resCorretas).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
   
     public static void main(String args[]) {
         
@@ -209,7 +220,7 @@ public class Pergunta3 extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Pergunta3 dialog = new Pergunta3(new javax.swing.JFrame(), true, 0);
+                Extra dialog = new Extra(new javax.swing.JFrame(), true, 0);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -225,14 +236,11 @@ public class Pergunta3 extends javax.swing.JDialog {
     private javax.swing.JLabel background;
     private javax.swing.JButton btnEnviar;
     private javax.swing.JButton btnTeclado;
-    private javax.swing.JTextField txfResposta;
+    private javax.swing.JButton btnVoltar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txfResposta;
     private javax.swing.JLabel txt1;
-    private javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;
-    private javax.swing.JLabel txt5;
-    private javax.swing.JLabel txt6;
-    private javax.swing.JLabel txt7;
-    private javax.swing.JLabel txtContagem;
     // End of variables declaration//GEN-END:variables
 }

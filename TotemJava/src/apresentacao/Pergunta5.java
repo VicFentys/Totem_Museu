@@ -6,15 +6,15 @@ import totemjava.*;
 
 public class Pergunta5 extends javax.swing.JDialog {
     
-    private TecladoVirtual tecladoVirtual;
-    int resCorretas = 0;
+    private TecladoVirtual tecladoVirtual; // Define a classe construtora do teclado virtual
+    int resCorretas = 0; // Variável global que será usada como contador de respostas corretas durante a aplicação
     
     public Pergunta5(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
         super(parent, false);
         initComponents();
-        txtContagem.setText("" + resCorretaTotal);
-        tecladoVirtual = new TecladoVirtual();
-        this.resCorretas = resCorretaTotal;
+        this.resCorretas = resCorretaTotal; // Define o valor atual de respostas corretas
+        txtContagem.setText("" + resCorretaTotal); // Configura o valor da label para mostrar a quantidade de respostas corretas
+        tecladoVirtual = new TecladoVirtual(); // Chama a classe construtora teclado virtual      
     }
 
     @SuppressWarnings("unchecked")
@@ -171,19 +171,20 @@ public class Pergunta5 extends javax.swing.JDialog {
         tecladoVirtual.fechar();
         
         if (txfResposta.getText().trim().equals("evidencias de agua liquida sazonal")){
-            resCorretas += 1;
-            new Info5(null, true, resCorretas).setVisible(true);
+            
+            resCorretas += 1; // Adiciona um ponto ao contador caso a resposta tenho sido correta
+            new Info5(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
             this.dispose();
         }
         else if (txfResposta.getText().trim().equals("presença de vegetaçao marciana") || 
                  txfResposta.getText().trim().equals("descoberta de vida microbiana") || 
                  txfResposta.getText().trim().equals("identificaçao de estruturas artificiais")){
             
-            new Info5(null, true, resCorretas).setVisible(true);
+            new Info5(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
             this.dispose();
         }
         else {
-            new Erro(null, true).setVisible(true);
+            new Erro(null, true).setVisible(true); // Chama a mensagem de erro
             txfResposta.setFocusable(false);
             txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
             txfResposta.setForeground(new Color(140,140,140));
@@ -197,13 +198,13 @@ public class Pergunta5 extends javax.swing.JDialog {
         txfResposta.setText("");
         txfResposta.setForeground(new Color(239,236,236));
         txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 22));
-        tecladoVirtual.setTextFieldAtual(txfResposta);
-        tecladoVirtual.mostrar();
+        tecladoVirtual.setTextFieldAtual(txfResposta); // Define o campo de texto da Pergunta1 como o atual
+        tecladoVirtual.mostrar(); // Abre o teclado virtual
     }//GEN-LAST:event_btnTecladoActionPerformed
   
     public static void main(String args[]) {
         
-        FlatArcDarkOrangeIJTheme.setup();
+        FlatArcDarkOrangeIJTheme.setup(); // Tema padrão definido para a aplicação
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {

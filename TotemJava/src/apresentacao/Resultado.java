@@ -5,10 +5,13 @@ import java.awt.*;
 
 public class Resultado extends javax.swing.JDialog {
 
+    int resCorretas = 0; // Variável global que será usada como contador de respostas corretas durante a aplicação
+    
     public Resultado(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
         super(parent, modal);
         initComponents();
-        txtContagem.setText("" + resCorretaTotal);
+        this.resCorretas = resCorretaTotal; // Define o valor atual de respostas corretas
+        txtContagem.setText("" + resCorretaTotal); // Configura o valor da label para mostrar a quantidade de respostas corretas
     }
 
     @SuppressWarnings("unchecked")
@@ -68,12 +71,12 @@ public class Resultado extends javax.swing.JDialog {
                 btnInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 160, -1));
+        getContentPane().add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 170, 60));
 
         btnSair.setBackground(new java.awt.Color(224, 77, 1));
         btnSair.setFont(new java.awt.Font("Nasalization Rg", 1, 40)); // NOI18N
         btnSair.setForeground(new java.awt.Color(37, 29, 58));
-        btnSair.setText("SAIR");
+        btnSair.setText("EXTRA");
         btnSair.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btnSair.setBorderPainted(false);
         btnSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -91,7 +94,7 @@ public class Resultado extends javax.swing.JDialog {
                 btnSairActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, 160, -1));
+        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 170, 60));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
@@ -119,7 +122,8 @@ public class Resultado extends javax.swing.JDialog {
     }//GEN-LAST:event_btnSairMouseExited
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        System.exit(0);
+        new Extra(null, true, resCorretas).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnInicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseEntered

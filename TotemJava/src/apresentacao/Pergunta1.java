@@ -6,14 +6,14 @@ import totemjava.*;
 
 public class Pergunta1 extends javax.swing.JDialog {
     
-    private TecladoVirtual tecladoVirtual;
-    int resCorretas = 0;
+    private TecladoVirtual tecladoVirtual; // Define a classe construtora do teclado virtual
+    int resCorretas = 0; // Variável global que será usada como contador de respostas corretas durante a aplicação
     
     public Pergunta1(java.awt.Frame parent, boolean modal) {
         super(parent, false);
         initComponents();
-        txtContagem.setText("0");
-        tecladoVirtual = new TecladoVirtual();
+        txtContagem.setText("0"); // Configura o valor da label para mostrar a quantidade de respostas corretas
+        tecladoVirtual = new TecladoVirtual(); // Chama a classe construtora teclado virtual
     }
 
     @SuppressWarnings("unchecked")
@@ -170,19 +170,20 @@ public class Pergunta1 extends javax.swing.JDialog {
         tecladoVirtual.fechar();
         
         if (txfResposta.getText().trim().equals("opportunity")){
-            resCorretas += 1;
-            new Info1(null, true, resCorretas).setVisible(true);
+            
+            resCorretas += 1; // Adiciona um ponto ao contador caso a resposta tenho sido correta
+            new Info1(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
             this.dispose();
         }
         else if (txfResposta.getText().trim().equals("spirit") || 
                  txfResposta.getText().trim().equals("curiosity") || 
                  txfResposta.getText().trim().equals("perseverance")){
             
-            new Info1(null, true, resCorretas).setVisible(true);
+            new Info1(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
             this.dispose();
         }
-        else {
-            new Erro(null, true).setVisible(true);
+        else {            
+            new Erro(null, true).setVisible(true); // Chama a mensagem de erro
             txfResposta.setFocusable(false);
             txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
             txfResposta.setForeground(new Color(140,140,140));
@@ -196,13 +197,13 @@ public class Pergunta1 extends javax.swing.JDialog {
         txfResposta.setText("");
         txfResposta.setForeground(new Color(239,236,236));
         txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 24));
-        tecladoVirtual.setTextFieldAtual(txfResposta);
-        tecladoVirtual.mostrar();
+        tecladoVirtual.setTextFieldAtual(txfResposta); // Define o campo de texto da Pergunta1 como o atual
+        tecladoVirtual.mostrar(); // Abre o teclado virtual
     }//GEN-LAST:event_btnTecladoActionPerformed
   
     public static void main(String args[]) {
         
-        FlatArcDarkOrangeIJTheme.setup();
+        FlatArcDarkOrangeIJTheme.setup(); // Tema padrão definido para a aplicação
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {

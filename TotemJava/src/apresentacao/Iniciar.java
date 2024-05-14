@@ -115,9 +115,8 @@ public class Iniciar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnIniciarMouseExited
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        Pergunta1 pergunta = new Pergunta1(null, true);
-        pergunta.setVisible(true);
-        this.hide();
+        new Pergunta1(null, true).setVisible(true); // Chama a primeira pergunta
+        this.dispose();
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     private void btnSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseEntered
@@ -134,7 +133,7 @@ public class Iniciar extends javax.swing.JDialog {
 
     public static void main(String args[]) {
         
-        FlatArcDarkOrangeIJTheme.setup();
+        FlatArcDarkOrangeIJTheme.setup(); // Tema padrão definido para a aplicação
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
