@@ -26,6 +26,9 @@ public class Pergunta3 extends javax.swing.JDialog {
         txtContagem = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
+        txt5 = new javax.swing.JLabel();
+        txt6 = new javax.swing.JLabel();
+        txt7 = new javax.swing.JLabel();
         txfResposta = new javax.swing.JTextField();
         btnEnviar = new javax.swing.JButton();
         btnTeclado = new javax.swing.JButton();
@@ -41,7 +44,7 @@ public class Pergunta3 extends javax.swing.JDialog {
         txt1.setForeground(new java.awt.Color(255, 119, 0));
         txt1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txt1.setText("TERCEIRA PERGUNTA");
-        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 350, -1));
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 350, -1));
 
         txt2.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
         txt2.setForeground(new java.awt.Color(224, 77, 1));
@@ -53,17 +56,35 @@ public class Pergunta3 extends javax.swing.JDialog {
         txtContagem.setText("0");
         getContentPane().add(txtContagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 20, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 800, -1));
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual desses robôs exploradores não está mais<br/>\n<p style='margin-top: 10'>operacional em Marte?\n");
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 20)); // NOI18N
+        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
-        txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt4.setText("Opção 1    /    Opção 2    /    Opção 3");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 800, -1));
+        txt4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt4.setText("<html>\n<b>1)</b> Perseverance");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 180, -1));
+
+        txt5.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt5.setForeground(new java.awt.Color(239, 236, 236));
+        txt5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt5.setText("<html>\n<b>2)</b> Curiosity");
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 170, -1));
+
+        txt6.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt6.setForeground(new java.awt.Color(239, 236, 236));
+        txt6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt6.setText("<html>\n<b>3)</b> Opportunity");
+        getContentPane().add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 170, -1));
+
+        txt7.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt7.setForeground(new java.awt.Color(239, 236, 236));
+        txt7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt7.setText("<html>\n<b>4)</b> Spirit");
+        getContentPane().add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 110, -1));
 
         txfResposta.setBackground(new java.awt.Color(37, 29, 58));
         txfResposta.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
@@ -149,13 +170,16 @@ public class Pergunta3 extends javax.swing.JDialog {
         
         tecladoVirtual.fechar();
         
-        if (txfResposta.getText().trim().equals("OPÇAO 3")){
+        if (txfResposta.getText().trim().equals("spirit")){
             resCorretas += 1;
-            new Pergunta4(null, true, resCorretas).setVisible(true);
+            new Info3(null, true, resCorretas).setVisible(true);
             this.dispose();
         }
-        else if (txfResposta.getText().trim().equals("OPÇAO 2") || txfResposta.getText().trim().equals("OPÇAO 1")){
-            new Pergunta4(null, true, resCorretas).setVisible(true);
+        else if (txfResposta.getText().trim().equals("perseverance") || 
+                 txfResposta.getText().trim().equals("curiosity") || 
+                 txfResposta.getText().trim().equals("opportunity")){
+            
+            new Info3(null, true, resCorretas).setVisible(true);
             this.dispose();
         }
         else {
@@ -205,6 +229,9 @@ public class Pergunta3 extends javax.swing.JDialog {
     private javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;
+    private javax.swing.JLabel txt5;
+    private javax.swing.JLabel txt6;
+    private javax.swing.JLabel txt7;
     private javax.swing.JLabel txtContagem;
     // End of variables declaration//GEN-END:variables
 }

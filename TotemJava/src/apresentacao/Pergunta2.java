@@ -26,6 +26,9 @@ public class Pergunta2 extends javax.swing.JDialog {
         txtContagem = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
+        txt5 = new javax.swing.JLabel();
+        txt6 = new javax.swing.JLabel();
+        txt7 = new javax.swing.JLabel();
         txfResposta = new javax.swing.JTextField();
         btnEnviar = new javax.swing.JButton();
         btnTeclado = new javax.swing.JButton();
@@ -42,7 +45,7 @@ public class Pergunta2 extends javax.swing.JDialog {
         txt1.setForeground(new java.awt.Color(255, 119, 0));
         txt1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txt1.setText("SEGUNDA PERGUNTA");
-        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 350, -1));
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 350, -1));
 
         txt2.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
         txt2.setForeground(new java.awt.Color(224, 77, 1));
@@ -54,17 +57,35 @@ public class Pergunta2 extends javax.swing.JDialog {
         txtContagem.setText("0");
         getContentPane().add(txtContagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 20, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 800, -1));
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual é o principal objetivo das missões dos<br/>\n<p style='margin-top: 10'>robôs exploradores em Marte?");
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 20)); // NOI18N
+        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 16)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
-        txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt4.setText("Opção 1    /    Opção 2    /    Opção 3");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 800, -1));
+        txt4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt4.setText("<html>\n<b>1)</b> Procurar sinais de vida passada");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+
+        txt5.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txt5.setForeground(new java.awt.Color(239, 236, 236));
+        txt5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt5.setText("<html>\n<b>2)</b> Analisar a composição atmosférica");
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 340, -1));
+
+        txt6.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txt6.setForeground(new java.awt.Color(239, 236, 236));
+        txt6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt6.setText("<html>\n<b>3)</b> Estudar a geologia do planeta");
+        getContentPane().add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 300, -1));
+
+        txt7.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txt7.setForeground(new java.awt.Color(239, 236, 236));
+        txt7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt7.setText("<html>\n<b>4)</b> Investigar possibilidade de colonização humana");
+        getContentPane().add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 450, -1));
 
         txfResposta.setBackground(new java.awt.Color(37, 29, 58));
         txfResposta.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
@@ -133,33 +154,20 @@ public class Pergunta2 extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEnviarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseEntered
-        btnEnviar.setBackground(new Color(255, 119, 0));
-    }//GEN-LAST:event_btnEnviarMouseEntered
-
-    private void btnEnviarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseExited
-        btnEnviar.setBackground(new Color(224, 77, 1));
-    }//GEN-LAST:event_btnEnviarMouseExited
-
-    private void btnTecladoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseEntered
-        btnTeclado.setBackground(new Color(255, 119, 0));
-    }//GEN-LAST:event_btnTecladoMouseEntered
-
-    private void btnTecladoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseExited
-        btnTeclado.setBackground(new Color(224, 77, 1));
-    }//GEN-LAST:event_btnTecladoMouseExited
-
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
-        
+
         tecladoVirtual.fechar();
-        
-        if (txfResposta.getText().trim().equals("OPÇAO 3")){
+
+        if (txfResposta.getText().trim().equals("estudar a geologia do planeta")){
             resCorretas += 1;
-            new Pergunta3(null, true, resCorretas).setVisible(true);
+            new Info2(null, true, resCorretas).setVisible(true);
             this.dispose();
         }
-        else if (txfResposta.getText().trim().equals("OPÇAO 2") || txfResposta.getText().trim().equals("OPÇAO 1")){
-            new Pergunta3(null, true, resCorretas).setVisible(true);
+        else if (txfResposta.getText().trim().equals("procurar sinais de vida passada") ||
+            txfResposta.getText().trim().equals("analisar a composiçao atmosferica") ||
+            txfResposta.getText().trim().equals("investigar possibilidade de colonizaçao humana")){
+
+            new Info2(null, true, resCorretas).setVisible(true);
             this.dispose();
         }
         else {
@@ -171,15 +179,31 @@ public class Pergunta2 extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
+    private void btnEnviarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseExited
+        btnEnviar.setBackground(new Color(224, 77, 1));
+    }//GEN-LAST:event_btnEnviarMouseExited
+
+    private void btnEnviarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseEntered
+        btnEnviar.setBackground(new Color(255, 119, 0));
+    }//GEN-LAST:event_btnEnviarMouseEntered
+
     private void btnTecladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTecladoActionPerformed
 
         txfResposta.setFocusable(true);
         txfResposta.setText("");
         txfResposta.setForeground(new Color(239,236,236));
-        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 24));
+        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 22));
         tecladoVirtual.setTextFieldAtual(txfResposta);
         tecladoVirtual.mostrar();
     }//GEN-LAST:event_btnTecladoActionPerformed
+
+    private void btnTecladoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseExited
+        btnTeclado.setBackground(new Color(224, 77, 1));
+    }//GEN-LAST:event_btnTecladoMouseExited
+
+    private void btnTecladoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTecladoMouseEntered
+        btnTeclado.setBackground(new Color(255, 119, 0));
+    }//GEN-LAST:event_btnTecladoMouseEntered
   
     public static void main(String args[]) {
         
@@ -210,6 +234,9 @@ public class Pergunta2 extends javax.swing.JDialog {
     private javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;
+    private javax.swing.JLabel txt5;
+    private javax.swing.JLabel txt6;
+    private javax.swing.JLabel txt7;
     private javax.swing.JLabel txtContagem;
     // End of variables declaration//GEN-END:variables
 }

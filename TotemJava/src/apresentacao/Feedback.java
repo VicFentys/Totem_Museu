@@ -73,7 +73,7 @@ public class Feedback extends javax.swing.JDialog {
         });
         getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 160, 80));
 
-        background.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
         background.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         background.setMaximumSize(new java.awt.Dimension(800, 600));

@@ -3,13 +3,14 @@ package apresentacao;
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
 
-public class Correta extends javax.swing.JDialog {
+public class Info1 extends javax.swing.JDialog {
     
     int resCorretas = 0;
-
-    public Correta(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
-        super(parent, modal);
+    
+    public Info1(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
+        super(parent, false);
         initComponents();
+        txtContagem.setText("" + resCorretaTotal);
         this.resCorretas = resCorretaTotal;
     }
 
@@ -19,34 +20,45 @@ public class Correta extends javax.swing.JDialog {
 
         txt1 = new javax.swing.JLabel();
         txt2 = new javax.swing.JLabel();
+        txtContagem = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
+        txt4 = new javax.swing.JLabel();
         btnProxima = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txt1.setFont(new java.awt.Font("OCR A Extended", 1, 36)); // NOI18N
-        txt1.setForeground(new java.awt.Color(239, 236, 236));
-        txt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt1.setText("RESPOSTA CORRETA");
-        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 800, -1));
+        txt1.setFont(new java.awt.Font("Nasalization Rg", 0, 30)); // NOI18N
+        txt1.setForeground(new java.awt.Color(255, 119, 0));
+        txt1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt1.setText("RESPOSTA");
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 330, -1));
 
-        txt2.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
-        txt2.setForeground(new java.awt.Color(239, 236, 236));
-        txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt2.setText("(curiosidades sobre a resposta)");
-        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 800, -1));
+        txt2.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
+        txt2.setForeground(new java.awt.Color(224, 77, 1));
+        txt2.setText("Acertos:");
+        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
+
+        txtContagem.setFont(new java.awt.Font("Nasalization Rg", 1, 24)); // NOI18N
+        txtContagem.setForeground(new java.awt.Color(224, 77, 1));
+        txtContagem.setText("0");
+        getContentPane().add(txtContagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 20, -1));
 
         txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("Clique no botão para seguir para a próxima pergunta");
-        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 800, -1));
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual robô explorador foi o primeiro a aterrissar<br/>\n<p style='margin-top: 10'>em Marte?\n");
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
+
+        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt4.setForeground(new java.awt.Color(239, 236, 236));
+        txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>Explicação da resposta certa<br/>\n<p style='margin-top: 10'>");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 800, -1));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
@@ -67,26 +79,17 @@ public class Correta extends javax.swing.JDialog {
                 btnProximaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 160, 80));
+        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 160, 80));
 
-        background.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
-        background.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         background.setMaximumSize(new java.awt.Dimension(800, 600));
         background.setMinimumSize(new java.awt.Dimension(800, 600));
-        background.setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnProximaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximaActionPerformed
-        
-        Pergunta2 pergunta2 = new Pergunta2(null, false, resCorretas);
-        pergunta2.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnProximaActionPerformed
 
     private void btnProximaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProximaMouseEntered
         btnProxima.setBackground(new Color(255, 119, 0));
@@ -96,6 +99,11 @@ public class Correta extends javax.swing.JDialog {
         btnProxima.setBackground(new Color(224, 77, 1));
     }//GEN-LAST:event_btnProximaMouseExited
 
+    private void btnProximaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximaActionPerformed
+        new Pergunta2(null, true, resCorretas).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnProximaActionPerformed
+  
     public static void main(String args[]) {
         
         FlatArcDarkOrangeIJTheme.setup();
@@ -103,7 +111,7 @@ public class Correta extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Correta dialog = new Correta(new javax.swing.JFrame(), true, 0);
+                Info1 dialog = new Info1(new javax.swing.JFrame(), true, 0);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -119,7 +127,9 @@ public class Correta extends javax.swing.JDialog {
     private javax.swing.JLabel background;
     private javax.swing.JButton btnProxima;
     private javax.swing.JLabel txt1;
-    protected javax.swing.JLabel txt2;
+    private javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;
+    private javax.swing.JLabel txt4;
+    private javax.swing.JLabel txtContagem;
     // End of variables declaration//GEN-END:variables
 }

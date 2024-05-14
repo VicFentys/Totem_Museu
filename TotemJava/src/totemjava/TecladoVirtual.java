@@ -55,7 +55,7 @@ public class TecladoVirtual {
                             } else if ("___".equals(actionCommand)) { // Adiciona um espaço
                                 textFieldAtual.setText(textFieldAtual.getText() + " ");
                             } else {
-                                textFieldAtual.setText(textFieldAtual.getText() + actionCommand);
+                                textFieldAtual.setText(textFieldAtual.getText() + actionCommand.toLowerCase());
                             }
                         }
                     }
