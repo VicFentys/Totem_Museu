@@ -2,9 +2,10 @@ package apresentacao;
 
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
+import propriedades.*;
 
 public class Iniciar extends javax.swing.JDialog {
-
+ 
     public Iniciar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -20,13 +21,16 @@ public class Iniciar extends javax.swing.JDialog {
         btnIniciar = new javax.swing.JButton();
         marte = new javax.swing.JLabel();
         btnSair = new javax.swing.JButton();
-        background = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
+        setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt1.setFont(new java.awt.Font("Nasalization Rg", 0, 30)); // NOI18N
@@ -44,7 +48,7 @@ public class Iniciar extends javax.swing.JDialog {
         txt3.setFont(new java.awt.Font("OCR A Extended", 0, 20)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Clique no botão abaixo para realizar nosso quiz interativo <br/>\n<p style='margin-top: 20'> de 5 perguntas, baseado em nossa exposição.\n");
+        txt3.setText("<html> <div style= 'text-align: center'> <p>Clique no botão abaixo para realizar nosso quiz interativo <br/> <p style='margin-top: 20'> de 5 perguntas, baseado em nossa exposição. ");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 800, -1));
 
         btnIniciar.setBackground(new java.awt.Color(224, 77, 1));
@@ -96,11 +100,9 @@ public class Iniciar extends javax.swing.JDialog {
         });
         getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 550, 100, 30));
 
-        background.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
-        background.setMaximumSize(new java.awt.Dimension(800, 600));
-        background.setMinimumSize(new java.awt.Dimension(800, 600));
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
         setLocationRelativeTo(null);
@@ -115,7 +117,9 @@ public class Iniciar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnIniciarMouseExited
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        new Pergunta1(null, true).setVisible(true); // Chama a primeira pergunta
+        Estaticos.resCorretas = 0; // Reseta o contator de respostas corretas para o próximo usuário
+        Estaticos.nome = ""; // Reseta o nome para o próximo usuário
+        new Nome(null, true).setVisible(true); // Chama a o painel Nome
         this.dispose();
     }//GEN-LAST:event_btnIniciarActionPerformed
 
@@ -151,9 +155,9 @@ public class Iniciar extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel background;
     private javax.swing.JButton btnIniciar;
     private javax.swing.JButton btnSair;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel marte;
     private javax.swing.JLabel txt1;
     private javax.swing.JLabel txt2;

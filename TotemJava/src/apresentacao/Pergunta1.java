@@ -2,18 +2,16 @@ package apresentacao;
 
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
-import totemjava.*;
+import propriedades.*;
 
 public class Pergunta1 extends javax.swing.JDialog {
     
-    private TecladoVirtual tecladoVirtual; // Define a classe construtora do teclado virtual
-    int resCorretas = 0; // Variável global que será usada como contador de respostas corretas durante a aplicação
+    private TecladoVirtual tecladoVirtual; // Define o objeto teclado virtual
     
     public Pergunta1(java.awt.Frame parent, boolean modal) {
         super(parent, false);
         initComponents();
-        txtContagem.setText("0"); // Configura o valor da label para mostrar a quantidade de respostas corretas
-        tecladoVirtual = new TecladoVirtual(); // Chama a classe construtora teclado virtual
+        tecladoVirtual = new TecladoVirtual(); // Chama a classe construtora do teclado virtual
     }
 
     @SuppressWarnings("unchecked")
@@ -21,8 +19,6 @@ public class Pergunta1 extends javax.swing.JDialog {
     private void initComponents() {
 
         txt1 = new javax.swing.JLabel();
-        txt2 = new javax.swing.JLabel();
-        txtContagem = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
         txt5 = new javax.swing.JLabel();
@@ -45,16 +41,6 @@ public class Pergunta1 extends javax.swing.JDialog {
         txt1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txt1.setText("PRIMEIRA PERGUNTA");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 350, -1));
-
-        txt2.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
-        txt2.setForeground(new java.awt.Color(224, 77, 1));
-        txt2.setText("Acertos:");
-        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
-
-        txtContagem.setFont(new java.awt.Font("Nasalization Rg", 1, 24)); // NOI18N
-        txtContagem.setForeground(new java.awt.Color(224, 77, 1));
-        txtContagem.setText("0");
-        getContentPane().add(txtContagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 20, -1));
 
         txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
@@ -171,15 +157,15 @@ public class Pergunta1 extends javax.swing.JDialog {
         
         if (txfResposta.getText().trim().equals("opportunity")){
             
-            resCorretas += 1; // Adiciona um ponto ao contador caso a resposta tenho sido correta
-            new Info1(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
+            Estaticos.resCorretas ++; // Adiciona um ponto ao contador caso a resposta tenho sido correta
+            new Info1(null, true).setVisible(true); // Chama o próximo JDialog
             this.dispose();
         }
         else if (txfResposta.getText().trim().equals("spirit") || 
                  txfResposta.getText().trim().equals("curiosity") || 
                  txfResposta.getText().trim().equals("perseverance")){
             
-            new Info1(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
+            new Info1(null, true).setVisible(true); // Chama o próximo JDialog
             this.dispose();
         }
         else {            
@@ -197,7 +183,7 @@ public class Pergunta1 extends javax.swing.JDialog {
         txfResposta.setText("");
         txfResposta.setForeground(new Color(239,236,236));
         txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 24));
-        tecladoVirtual.setTextFieldAtual(txfResposta); // Define o campo de texto da Pergunta1 como o atual
+        tecladoVirtual.setTextFieldAtual(txfResposta); // Define o campo de texto como o atual
         tecladoVirtual.mostrar(); // Abre o teclado virtual
     }//GEN-LAST:event_btnTecladoActionPerformed
   
@@ -226,12 +212,10 @@ public class Pergunta1 extends javax.swing.JDialog {
     private javax.swing.JButton btnTeclado;
     private javax.swing.JTextField txfResposta;
     private javax.swing.JLabel txt1;
-    private javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;
     private javax.swing.JLabel txt5;
     private javax.swing.JLabel txt6;
     private javax.swing.JLabel txt7;
-    private javax.swing.JLabel txtContagem;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,7 +8,8 @@ public class TotemJava {
     public static void main(String[] args) {
         
         FlatArcDarkOrangeIJTheme.setup(); // Tema padrão definido para a aplicação
-        new Iniciar(null, true).setVisible(true); // Abre a tela de início
+        new Fundo(null, false).setVisible(true); // Background
+        new Iniciar(null, false).setVisible(true); // Abre a tela de início
     }
     
 }

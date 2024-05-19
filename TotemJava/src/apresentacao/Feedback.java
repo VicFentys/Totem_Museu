@@ -4,13 +4,10 @@ import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
 
 public class Feedback extends javax.swing.JDialog {
-    
-    int resCorretas = 0; // Variável global que será usada como contador de respostas corretas durante a aplicação
 
-    public Feedback(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
+    public Feedback(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        this.resCorretas = resCorretaTotal; // Define o valor atual de respostas corretas
     }
 
     @SuppressWarnings("unchecked")
@@ -40,7 +37,7 @@ public class Feedback extends javax.swing.JDialog {
         txt2.setForeground(new java.awt.Color(239, 236, 236));
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt2.setText("<html> <div style= 'text-align: center'> <p>De 1 a 10, qual nota você daria para <br/> <p style='margin-top: 20'> nossa atual exposição?");
-        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 800, -1));
+        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 800, -1));
 
         avaliacao.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
         avaliacao.setForeground(new java.awt.Color(255, 119, 0));
@@ -50,7 +47,7 @@ public class Feedback extends javax.swing.JDialog {
         avaliacao.setPaintLabels(true);
         avaliacao.setSnapToTicks(true);
         avaliacao.setValue(5);
-        getContentPane().add(avaliacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 580, 120));
+        getContentPane().add(avaliacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 580, 120));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
@@ -71,7 +68,7 @@ public class Feedback extends javax.swing.JDialog {
                 btnProximaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 160, 80));
+        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 160, 80));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
@@ -93,7 +90,7 @@ public class Feedback extends javax.swing.JDialog {
     }//GEN-LAST:event_btnProximaMouseExited
 
     private void btnProximaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximaActionPerformed
-        new Resultado(null, true, resCorretas).setVisible(true); // Chama o próximo JDialog mandando a quantidade de acertos para ele
+        new Comentario(null, true).setVisible(true); // Chama o próximo JDialog
         this.dispose();
     }//GEN-LAST:event_btnProximaActionPerformed
 
@@ -104,7 +101,7 @@ public class Feedback extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Feedback dialog = new Feedback(new javax.swing.JFrame(), true, 0);
+                Feedback dialog = new Feedback(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

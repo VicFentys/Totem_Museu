@@ -2,16 +2,14 @@ package apresentacao;
 
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
+import propriedades.*;
 
 public class Resultado extends javax.swing.JDialog {
-
-    int resCorretas = 0; // Variável global que será usada como contador de respostas corretas durante a aplicação
     
-    public Resultado(java.awt.Frame parent, boolean modal, int resCorretaTotal) {
+    public Resultado(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        this.resCorretas = resCorretaTotal; // Define o valor atual de respostas corretas
-        txtContagem.setText("" + resCorretaTotal); // Configura o valor da label para mostrar a quantidade de respostas corretas
+        txtContagem.setText(Estaticos.resCorretas + " / 5"); // Configura o valor da label para mostrar a quantidade de respostas corretas
     }
 
     @SuppressWarnings("unchecked")
@@ -20,9 +18,9 @@ public class Resultado extends javax.swing.JDialog {
 
         txt1 = new javax.swing.JLabel();
         txt2 = new javax.swing.JLabel();
+        txt4 = new javax.swing.JLabel();
         txtContagem = new javax.swing.JLabel();
-        btnInicio = new javax.swing.JButton();
-        btnSair = new javax.swing.JButton();
+        btnTabela = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -44,57 +42,40 @@ public class Resultado extends javax.swing.JDialog {
         txt2.setText("Total de acertos:");
         getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 800, -1));
 
+        txt4.setFont(new java.awt.Font("Nasalization Rg", 0, 18)); // NOI18N
+        txt4.setForeground(new java.awt.Color(224, 77, 1));
+        txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt4.setText("Tabela de Classificação");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, 270, -1));
+
         txtContagem.setFont(new java.awt.Font("Nasalization Rg", 1, 60)); // NOI18N
         txtContagem.setForeground(new java.awt.Color(239, 236, 236));
         txtContagem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtContagem.setText("0");
         getContentPane().add(txtContagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 800, -1));
 
-        btnInicio.setBackground(new java.awt.Color(224, 77, 1));
-        btnInicio.setFont(new java.awt.Font("Nasalization Rg", 1, 40)); // NOI18N
-        btnInicio.setForeground(new java.awt.Color(37, 29, 58));
-        btnInicio.setText("INICIO");
-        btnInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        btnInicio.setBorderPainted(false);
-        btnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnInicio.setFocusPainted(false);
-        btnInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnTabela.setBackground(new java.awt.Color(224, 77, 1));
+        btnTabela.setFont(new java.awt.Font("Nasalization Rg", 1, 40)); // NOI18N
+        btnTabela.setForeground(new java.awt.Color(37, 29, 58));
+        btnTabela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ranking.png"))); // NOI18N
+        btnTabela.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnTabela.setBorderPainted(false);
+        btnTabela.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTabela.setFocusPainted(false);
+        btnTabela.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnInicioMouseEntered(evt);
+                btnTabelaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnInicioMouseExited(evt);
+                btnTabelaMouseExited(evt);
             }
         });
-        btnInicio.addActionListener(new java.awt.event.ActionListener() {
+        btnTabela.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInicioActionPerformed(evt);
+                btnTabelaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 170, 60));
-
-        btnSair.setBackground(new java.awt.Color(224, 77, 1));
-        btnSair.setFont(new java.awt.Font("Nasalization Rg", 1, 40)); // NOI18N
-        btnSair.setForeground(new java.awt.Color(37, 29, 58));
-        btnSair.setText("EXTRA");
-        btnSair.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        btnSair.setBorderPainted(false);
-        btnSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnSair.setFocusPainted(false);
-        btnSair.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnSairMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnSairMouseExited(evt);
-            }
-        });
-        btnSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 170, 60));
+        getContentPane().add(btnTabela, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 440, 150, 70));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
@@ -108,31 +89,18 @@ public class Resultado extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
-        new Iniciar(null, true).setVisible(true);
+    private void btnTabelaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTabelaMouseEntered
+        btnTabela.setBackground(new Color(255, 119, 0));
+    }//GEN-LAST:event_btnTabelaMouseEntered
+
+    private void btnTabelaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTabelaMouseExited
+        btnTabela.setBackground(new Color(224, 77, 1));
+    }//GEN-LAST:event_btnTabelaMouseExited
+
+    private void btnTabelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTabelaActionPerformed
+        new Tabela(null, true).setVisible(true); // Chama o próximo JDialog
         this.dispose();
-    }//GEN-LAST:event_btnInicioActionPerformed
-
-    private void btnSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseEntered
-        btnSair.setBackground(new Color(255, 119, 0));
-    }//GEN-LAST:event_btnSairMouseEntered
-
-    private void btnSairMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseExited
-        btnSair.setBackground(new Color(224, 77, 1));
-    }//GEN-LAST:event_btnSairMouseExited
-
-    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        new Extra(null, true, resCorretas).setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnSairActionPerformed
-
-    private void btnInicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseEntered
-        btnInicio.setBackground(new Color(255, 119, 0));
-    }//GEN-LAST:event_btnInicioMouseEntered
-
-    private void btnInicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseExited
-        btnInicio.setBackground(new Color(224, 77, 1));
-    }//GEN-LAST:event_btnInicioMouseExited
+    }//GEN-LAST:event_btnTabelaActionPerformed
 
     public static void main(String args[]) {
         
@@ -141,7 +109,7 @@ public class Resultado extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Resultado dialog = new Resultado(new javax.swing.JFrame(), true, 0);
+                Resultado dialog = new Resultado(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -155,10 +123,10 @@ public class Resultado extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
-    private javax.swing.JButton btnInicio;
-    private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnTabela;
     private javax.swing.JLabel txt1;
     private javax.swing.JLabel txt2;
+    private javax.swing.JLabel txt4;
     private javax.swing.JLabel txtContagem;
     // End of variables declaration//GEN-END:variables
 }
