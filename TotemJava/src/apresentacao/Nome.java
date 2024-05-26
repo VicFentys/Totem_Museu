@@ -27,6 +27,7 @@ public class Nome extends javax.swing.JDialog {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
@@ -38,14 +39,14 @@ public class Nome extends javax.swing.JDialog {
         txt1.setText("MUSEU DE SOROCABA - QUIZ GAME");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 800, -1));
 
-        txt2.setFont(new java.awt.Font("OCR A Extended", 1, 26)); // NOI18N
+        txt2.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         txt2.setForeground(new java.awt.Color(239, 236, 236));
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt2.setText("Digite seu nome para começar");
-        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 800, -1));
+        txt2.setText("Digite um nome para começar");
+        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 800, -1));
 
         txfResposta.setBackground(new java.awt.Color(37, 29, 58));
-        txfResposta.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txfResposta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txfResposta.setForeground(new java.awt.Color(140, 140, 140));
         txfResposta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
@@ -132,7 +133,7 @@ public class Nome extends javax.swing.JDialog {
             txfResposta.setFocusable(false);
             txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
             txfResposta.setForeground(new Color(140,140,140));
-            txfResposta.setFont(new Font("OCR A Extended", Font.PLAIN, 18));
+            txfResposta.setFont(new Font("Segoe UI", Font.PLAIN, 18));
         }
         else {
             Estaticos.nome = txfResposta.getText();
@@ -146,7 +147,7 @@ public class Nome extends javax.swing.JDialog {
         txfResposta.setFocusable(true);
         txfResposta.setText("");
         txfResposta.setForeground(new Color(239,236,236));
-        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 24));
+        txfResposta.setFont(new Font("Segoe UI", Font.BOLD, 24));
         tecladoVirtual.setTextFieldAtual(txfResposta); // Define o campo de texto como o atual
         tecladoVirtual.mostrar(); // Abre o teclado virtual
     }//GEN-LAST:event_btnTecladoActionPerformed

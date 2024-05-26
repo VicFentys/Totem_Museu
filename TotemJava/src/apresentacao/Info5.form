@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="alwaysOnTop" type="boolean" value="true"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[800, 600]"/>
     </Property>
@@ -50,13 +51,13 @@
     <Component class="javax.swing.JLabel" name="txt3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="OCR A Extended" size="20" style="1"/>
+          <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ec" green="ec" red="ef" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: center&apos;&gt;&#xa;&lt;p&gt;Qual foi uma das descobertas mais significativas&lt;br/&gt;&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;feitas pelo rob&#xf4; Curiosity em Marte?&#xa;"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: center&apos;&gt;&#xa;&lt;p&gt;Em que ano o rover Curiosity&lt;br/&gt;&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;aterrissou em marte?&#xa;"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -67,17 +68,17 @@
     <Component class="javax.swing.JLabel" name="txt4">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="OCR A Extended" size="18" style="0"/>
+          <Font name="Segoe UI" size="18" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ec" green="ec" red="ef" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: center&apos;&gt;&#xa;&lt;p&gt;Explica&#xe7;&#xe3;o da resposta certa&lt;br/&gt;&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: center&apos;&gt;&#xa;&lt;p&gt;O Curiosity era o maior e mais robusto rover j&#xe1; enviado a Marte em sua&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;&#xe9;poca, perdendo apenas para o novo rover Perseverance.&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;Foi lan&#xe7;ado em novembro de 2011 e &lt;b&gt;aterrissou&lt;/b&gt;&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;&lt;b&gt;em Marte em 5 de agosto de 2012,&lt;/b&gt; na regi&#xe3;o da cratera Gale.&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;Foi o primeiro pouso realizado em Marte com a ajuda de um paraquedas&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;e momentos antes do contato com o solo,&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;disparou foguetes para diminuir a velocidade de descida."/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="240" width="800" height="-1"/>
+          <AbsoluteConstraints x="0" y="190" width="800" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

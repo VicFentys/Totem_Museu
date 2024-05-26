@@ -17,11 +17,13 @@ public class Info2 extends javax.swing.JDialog {
         txt1 = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
+        txt5 = new javax.swing.JLabel();
         btnProxima = new javax.swing.JButton();
         marte = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
@@ -33,17 +35,23 @@ public class Info2 extends javax.swing.JDialog {
         txt1.setText("RESPOSTA");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 330, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
+        txt3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual é o principal objetivo das missões dos<br/>\n<p style='margin-top: 10'>robôs exploradores em Marte?\n");
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual foi a missão inicial da nave espacial<br/>\n<p style='margin-top: 10'>Odissey, que orbita Marte até hoje?\n");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>Explicação da resposta certa<br/>\n<p style='margin-top: 10'>");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 800, -1));
+        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>Sua missão inicial era fazer o primeiro mapa global da <b>quantidade e</b>\n<p style='margin-top: 10'><b>distribuição de diversos elementos químicos e minerais que constituem</b> \n<p style='margin-top: 10'><b>a superfície marciana,</b> coisa que completou com sucesso em 2004.\n");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 800, -1));
+
+        txt5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txt5.setForeground(new java.awt.Color(239, 236, 236));
+        txt5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt5.setText("<html>\n<div style= 'text-align: center'>\n<p>Com esses mapas, os cientistas puderam identificar regiões onde\n<p style='margin-top: 10'>água congelada esta enterrada e conferir temperatura da superfície\n<p style='margin-top: 10'>em diferentes regiões, junto de imagens da topografia marciana.");
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 800, -1));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
@@ -67,7 +75,7 @@ public class Info2 extends javax.swing.JDialog {
         getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 160, 80));
 
         marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/terra.png"))); // NOI18N
-        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
+        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, -1, -1));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
@@ -119,5 +127,6 @@ public class Info2 extends javax.swing.JDialog {
     private javax.swing.JLabel txt1;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;
+    private javax.swing.JLabel txt5;
     // End of variables declaration//GEN-END:variables
 }

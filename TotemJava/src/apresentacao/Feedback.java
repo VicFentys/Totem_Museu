@@ -21,6 +21,7 @@ public class Feedback extends javax.swing.JDialog {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
@@ -33,7 +34,7 @@ public class Feedback extends javax.swing.JDialog {
         txt1.setText("PERGUNTA DE SATISFAÇÃO");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 450, -1));
 
-        txt2.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        txt2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txt2.setForeground(new java.awt.Color(239, 236, 236));
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt2.setText("<html> <div style= 'text-align: center'> <p>De 1 a 10, qual nota você daria para <br/> <p style='margin-top: 20'> nossa atual exposição?");

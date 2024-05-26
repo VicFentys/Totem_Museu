@@ -24,6 +24,7 @@ public class Iniciar extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(800, 600));
@@ -39,17 +40,17 @@ public class Iniciar extends javax.swing.JDialog {
         txt1.setText("MUSEU DE SOROCABA - QUIZ GAME");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 800, -1));
 
-        txt2.setFont(new java.awt.Font("OCR A Extended", 1, 24)); // NOI18N
+        txt2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txt2.setForeground(new java.awt.Color(239, 236, 236));
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt2.setText("Seja Bem-Vindo!");
         getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 800, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 0, 20)); // NOI18N
+        txt3.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt3.setText("<html> <div style= 'text-align: center'> <p>Clique no botão abaixo para realizar nosso quiz interativo <br/> <p style='margin-top: 20'> de 5 perguntas, baseado em nossa exposição. ");
-        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 800, -1));
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 800, -1));
 
         btnIniciar.setBackground(new java.awt.Color(224, 77, 1));
         btnIniciar.setFont(new java.awt.Font("Nasalization Rg", 1, 40)); // NOI18N
@@ -75,7 +76,7 @@ public class Iniciar extends javax.swing.JDialog {
         getContentPane().add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 180, 60));
 
         marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte1.png"))); // NOI18N
-        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, -1, -1));
+        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, -1, -1));
 
         btnSair.setBackground(new java.awt.Color(224, 77, 1));
         btnSair.setFont(new java.awt.Font("Nasalization Rg", 1, 24)); // NOI18N

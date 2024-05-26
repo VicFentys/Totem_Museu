@@ -6,15 +6,14 @@ import javax.swing.table.DefaultTableModel;
 import propriedades.*;
 
 public class Tabela extends javax.swing.JDialog {
-
     
     public Tabela(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
+
         DefaultTableModel modelo = (DefaultTableModel) tabela.getModel(); // Definição do objeto e tabela que será inserido os valores
         Object[] dados = {Estaticos.nome, Estaticos.resCorretas}; // Vetor contendo a linha a ser inserida
-        modelo.addRow(dados); // Comando para adicionar os valores
+        modelo.addRow(dados); // Comando para adicionar os valores   
     }
 
     @SuppressWarnings("unchecked")
@@ -29,6 +28,7 @@ public class Tabela extends javax.swing.JDialog {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
@@ -46,14 +46,14 @@ public class Tabela extends javax.swing.JDialog {
 
         tabela.setAutoCreateRowSorter(true);
         tabela.setBackground(new java.awt.Color(7, 15, 43));
-        tabela.setFont(new java.awt.Font("OCR A Extended", 0, 30)); // NOI18N
+        tabela.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         tabela.setForeground(new java.awt.Color(239, 236, 236));
         tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"maria", "4"},
                 {"douglas", "1"},
                 {"enzo", "3"},
-                {"fernanda", "2"}
+                {"fernanda", "3"}
             },
             new String [] {
                 "Nome", "Acertos"
@@ -136,7 +136,7 @@ public class Tabela extends javax.swing.JDialog {
 
     public static void main(String args[]) {
         
-        FlatArcDarkOrangeIJTheme.setup();
+        FlatArcDarkOrangeIJTheme.setup(); // Tema padrão definido para a aplicação
         
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {

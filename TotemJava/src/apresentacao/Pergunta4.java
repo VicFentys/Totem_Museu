@@ -31,6 +31,7 @@ public class Pergunta4 extends javax.swing.JDialog {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
@@ -42,38 +43,38 @@ public class Pergunta4 extends javax.swing.JDialog {
         txt1.setText("QUARTA PERGUNTA");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 350, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
+        txt3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual é o nome da agência espacial responsável pela<br/>\n<p style='margin-top: 10'>missão do robô Perseverance em Marte?\n");
+        txt3.setText("<html> <div style= 'text-align: center'> <p>Qual é o nome da agência espacial responsável pela<br/> <p style='margin-top: 10'>missão do rover Perseverance em Marte? ");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txt4.setText("<html>\n<b>1)</b> NASA");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 110, -1));
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 90, -1));
 
-        txt5.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt5.setForeground(new java.awt.Color(239, 236, 236));
         txt5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txt5.setText("<html>\n<b>2)</b> ESA");
-        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 170, -1));
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 70, -1));
 
-        txt6.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt6.setForeground(new java.awt.Color(239, 236, 236));
         txt6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txt6.setText("<html>\n<b>3)</b> CNSA");
-        getContentPane().add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 140, -1));
+        getContentPane().add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 90, -1));
 
-        txt7.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt7.setForeground(new java.awt.Color(239, 236, 236));
         txt7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txt7.setText("<html>\n<b>4)</b> ISRO");
-        getContentPane().add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 180, -1));
+        getContentPane().add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 80, -1));
 
         txfResposta.setBackground(new java.awt.Color(37, 29, 58));
-        txfResposta.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txfResposta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txfResposta.setForeground(new java.awt.Color(140, 140, 140));
         txfResposta.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
@@ -177,7 +178,7 @@ public class Pergunta4 extends javax.swing.JDialog {
             txfResposta.setFocusable(false);
             txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
             txfResposta.setForeground(new Color(140,140,140));
-            txfResposta.setFont(new Font("OCR A Extended", Font.PLAIN, 18));
+            txfResposta.setFont(new Font("Segoe UI", Font.PLAIN, 18));
         }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
@@ -186,7 +187,7 @@ public class Pergunta4 extends javax.swing.JDialog {
         txfResposta.setFocusable(true);
         txfResposta.setText("");
         txfResposta.setForeground(new Color(239,236,236));
-        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 24));
+        txfResposta.setFont(new Font("Segoe UI", Font.BOLD, 24));
         tecladoVirtual.setTextFieldAtual(txfResposta); // Define o campo de texto da Pergunta1 como o atual
         tecladoVirtual.mostrar(); // Abre o teclado virtual
     }//GEN-LAST:event_btnTecladoActionPerformed

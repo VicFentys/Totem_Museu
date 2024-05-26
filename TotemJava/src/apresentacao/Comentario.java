@@ -29,6 +29,7 @@ public class Comentario extends javax.swing.JDialog {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
@@ -40,16 +41,16 @@ public class Comentario extends javax.swing.JDialog {
         txt1.setText("SUGESTÕES & COMENTÁRIOS");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 800, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
+        txt3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Caso tenha alguma observação, ou gostaria de apontar<br/>\n<p style='margin-top: 8'>possíveis mudanças referente a nossa\n<p style='margin-top: 8'>exposição, digite no campo abaixo.\n<p style='margin-top: 8'>Agradecemos seu tempo!");
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Caso tenha alguma observação, ou gostaria de apontar<br/>\n<p style='margin-top: 8'>possíveis mudanças referente a nossa exposição, \n<p style='margin-top: 8'>digite no campo abaixo. Agradecemos seu tempo!");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        txt4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txt4.setForeground(new java.awt.Color(0, 204, 0));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, 170, -1));
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, 170, -1));
 
         btnVoltar.setBackground(new java.awt.Color(224, 77, 1));
         btnVoltar.setFont(new java.awt.Font("Nasalization Rg", 1, 24)); // NOI18N
@@ -78,10 +79,10 @@ public class Comentario extends javax.swing.JDialog {
 
         txfResposta.setBackground(new java.awt.Color(37, 29, 58));
         txfResposta.setColumns(20);
-        txfResposta.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txfResposta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txfResposta.setForeground(new java.awt.Color(140, 140, 140));
         txfResposta.setLineWrap(true);
-        txfResposta.setRows(4);
+        txfResposta.setRows(3);
         txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
         txfResposta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(224, 77, 1)));
         txfResposta.setFocusable(false);
@@ -168,7 +169,7 @@ public class Comentario extends javax.swing.JDialog {
         txfResposta.setFocusable(false);
         txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
         txfResposta.setForeground(new Color(140,140,140));
-        txfResposta.setFont(new Font("OCR A Extended", Font.PLAIN, 18));
+        txfResposta.setFont(new Font("Segoe UI", Font.PLAIN, 18));
     }//GEN-LAST:event_btnEnviarActionPerformed
 
     private void btnEnviarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseExited
@@ -185,7 +186,7 @@ public class Comentario extends javax.swing.JDialog {
         txfResposta.setFocusable(true);
         txfResposta.setText("");
         txfResposta.setForeground(new Color(239,236,236));
-        txfResposta.setFont(new Font("OCR A Extended", Font.BOLD, 20));
+        txfResposta.setFont(new Font("Segoe UI", Font.BOLD, 20));
         tecladoVirtual.setTextAreaAtual(txfResposta); // Define o campo de texto como o atual
         tecladoVirtual.mostrar(); // Abre o teclado virtual
     }//GEN-LAST:event_btnTecladoActionPerformed

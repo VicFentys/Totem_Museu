@@ -21,6 +21,7 @@ public class Info5 extends javax.swing.JDialog {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
@@ -32,17 +33,17 @@ public class Info5 extends javax.swing.JDialog {
         txt1.setText("RESPOSTA");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 330, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
+        txt3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual foi uma das descobertas mais significativas<br/>\n<p style='margin-top: 10'>feitas pelo robô Curiosity em Marte?\n");
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Em que ano o rover Curiosity<br/>\n<p style='margin-top: 10'>aterrissou em marte?\n");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>Explicação da resposta certa<br/>\n<p style='margin-top: 10'>");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 800, -1));
+        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>O Curiosity era o maior e mais robusto rover já enviado a Marte em sua\n<p style='margin-top: 10'>época, perdendo apenas para o novo rover Perseverance.\n<p style='margin-top: 10'>Foi lançado em novembro de 2011 e <b>aterrissou</b>\n<p style='margin-top: 10'><b>em Marte em 5 de agosto de 2012,</b> na região da cratera Gale.\n<p style='margin-top: 10'>Foi o primeiro pouso realizado em Marte com a ajuda de um paraquedas\n<p style='margin-top: 10'>e momentos antes do contato com o solo,\n<p style='margin-top: 10'>disparou foguetes para diminuir a velocidade de descida.");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 800, -1));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N

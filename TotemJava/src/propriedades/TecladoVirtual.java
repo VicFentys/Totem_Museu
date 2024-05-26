@@ -84,7 +84,7 @@ public class TecladoVirtual {
         this.textFieldAtual = textField;
     }
     
-    public void setTextAreaAtual(JTextArea textArea) { // Cria o método que será usado nas perguntas
+    public void setTextAreaAtual(JTextArea textArea) { // Cria o método que será usado na pergunta de satisfação
         this.textAreaAtual = textArea;
     }
 

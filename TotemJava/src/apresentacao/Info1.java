@@ -17,10 +17,12 @@ public class Info1 extends javax.swing.JDialog {
         txt1 = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
+        txt5 = new javax.swing.JLabel();
         btnProxima = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(800, 600));
         setUndecorated(true);
         setResizable(false);
@@ -32,17 +34,23 @@ public class Info1 extends javax.swing.JDialog {
         txt1.setText("RESPOSTA");
         getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 330, -1));
 
-        txt3.setFont(new java.awt.Font("OCR A Extended", 1, 20)); // NOI18N
+        txt3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual robô explorador foi o primeiro a aterrissar<br/>\n<p style='margin-top: 10'>em Marte?\n");
+        txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual rover explorador foi o primeiro a<br/>\n<p style='margin-top: 10'>aterrissar em Marte?\n");
         getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
 
-        txt4.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txt4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>Explicação da resposta certa<br/>\n<p style='margin-top: 10'>");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 800, -1));
+        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>Composta por um módulo de pouso (Lander), mais tarde batizado de\n<p style='margin-top: 10'>\"Carl Sagan Memorial Station\", e um pequeno robô, chamado <b>Sojourner,</b>\n<p style='margin-top: 10'>a Pathfinder foi lançada em 4 de dezembro de 1996,\n<p style='margin-top: 10'>e chegou em Marte sete meses depois, em 4 de julho de 1997.");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 800, -1));
+
+        txt5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txt5.setForeground(new java.awt.Color(239, 236, 236));
+        txt5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt5.setText("<html>\n<div style= 'text-align: center'>\n<p>Equipado com seis rodas, duas câmeras e alguns instrumentos científicos,\n<p style='margin-top: 10'>o <b>Sojourner</b> media 65 cm de comprimento, 48 cm de largura, 30 cm de\n<p style='margin-top: 10'>altura e pesava 11,5 Kg.");
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 800, -1));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
@@ -113,5 +121,6 @@ public class Info1 extends javax.swing.JDialog {
     private javax.swing.JLabel txt1;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;
+    private javax.swing.JLabel txt5;
     // End of variables declaration//GEN-END:variables
 }
