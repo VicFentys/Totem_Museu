@@ -3,7 +3,6 @@ package apresentacao;
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
 import propriedades.*;
-import javax.swing.JOptionPane;
 
 public class Nome extends javax.swing.JDialog {
     
@@ -129,7 +128,7 @@ public class Nome extends javax.swing.JDialog {
         tecladoVirtual.fechar();
         
         if (txfResposta.getText().isEmpty() || txfResposta.getText().equals("Clique no botão de teclado para digitar sua resposta")) {            
-            JOptionPane.showMessageDialog(null, "Digite um valor válido no campo", "Erro de validação", JOptionPane.ERROR_MESSAGE);
+            new Erro2(null, true).setVisible(true); // Chama a mensagem de erro
             txfResposta.setFocusable(false);
             txfResposta.setText("Clique no botão de teclado para digitar sua resposta");
             txfResposta.setForeground(new Color(140,140,140));

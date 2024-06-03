@@ -27,10 +27,10 @@ public class Erro extends javax.swing.JDialog {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txt1.setFont(new java.awt.Font("OCR A Extended", 1, 14)); // NOI18N
+        txt1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt1.setForeground(new java.awt.Color(239, 236, 236));
         txt1.setText("<html>\n<div style= 'text-align: center'>\n<p>Digite uma das opções <br/>\n<p style='margin-top: 10'>de resposta");
-        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
+        getContentPane().add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
 
         marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/rover.png"))); // NOI18N
         getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
@@ -56,7 +56,7 @@ public class Erro extends javax.swing.JDialog {
                 btnOkActionPerformed(evt);
             }
         });
-        getContentPane().add(btnOk, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 88, 60, 30));
+        getContentPane().add(btnOk, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 70, 30));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
         background.setMaximumSize(new java.awt.Dimension(320, 150));
