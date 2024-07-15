@@ -38,13 +38,13 @@ public class Info4 extends javax.swing.JDialog {
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual é o nome da agência espacial responsável pela<br/>\n<p style='margin-top: 10'>missão do rover Perseverance em Marte?\n");
-        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 800, -1));
 
         txt4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt4.setText("<html>\n<div style= 'text-align: center'>\n<p><b>Criada pela NASA</b>, a missão Mars 2020 enviou para lá o rover\n<p style='margin-top: 10'>Perseverance, com o principal objetivo de determinar o potencial de\n<p style='margin-top: 10'>vida antiga em Marte. Para isso, o robô buscará sinais de condições\n<p style='margin-top: 10'>habitáveis no antigo Planeta Vermelho, além de procurar por\n<p style='margin-top: 10'>bioassinaturas de vida microbiana que possa ter existido quando havia  \n<p style='margin-top: 10'>água por lá. A missão pousou com sucesso em fevereiro de 2021.");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 800, -1));
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 800, -1));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
@@ -65,7 +65,7 @@ public class Info4 extends javax.swing.JDialog {
                 btnProximaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 160, 80));
+        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 160, 70));
 
         marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte2.png"))); // NOI18N
         getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, -1, -1));

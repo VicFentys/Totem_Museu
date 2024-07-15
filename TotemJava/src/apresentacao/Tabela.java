@@ -2,18 +2,41 @@ package apresentacao;
 
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
+import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import propriedades.*;
 
 public class Tabela extends javax.swing.JDialog {
-    
+        
     public Tabela(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-
-        DefaultTableModel modelo = (DefaultTableModel) tabela.getModel(); // Definição do objeto e tabela que será inserido os valores
-        Object[] dados = {Estaticos.nome, Estaticos.resCorretas}; // Vetor contendo a linha a ser inserida
-        modelo.addRow(dados); // Comando para adicionar os valores   
+        addLinha();
+    }
+    
+    public ArrayList Lista() {
+        ArrayList<Jogador> list = new  ArrayList<>();
+        Jogador j1 = new Jogador("fernando", 2, 7);
+        Jogador j2 = new Jogador("maria", 3, 9);
+        Jogador j3 = new Jogador("douglas", 5, 6);
+        Jogador j4 = new Jogador(Estaticos.nome, Estaticos.resCorretas, Estaticos.AVALIACAO);
+        list.add(j1); // Comando para adicionar os valores 
+        list.add(j2);
+        list.add(j3);
+        list.add(j4);
+        return list;
+    }
+    
+    public void addLinha() {
+        DefaultTableModel modelo = (DefaultTableModel) tabela.getModel();
+        ArrayList<Jogador> list = Lista();
+        Object rowData[] = new Object[4];
+        for (int i = 0; i < list.size(); i++) {
+            rowData[0] = list.get(i).getNome();
+            rowData[1] = list.get(i).getTotal();
+            rowData[2] = list.get(i).getAva();
+            modelo.addRow(rowData);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -25,6 +48,7 @@ public class Tabela extends javax.swing.JDialog {
         tabela = new javax.swing.JTable();
         btnInicio = new javax.swing.JButton();
         txt2 = new javax.swing.JLabel();
+        img = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -50,35 +74,28 @@ public class Tabela extends javax.swing.JDialog {
         tabela.setForeground(new java.awt.Color(239, 236, 236));
         tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"maria", "4"},
-                {"douglas", "1"},
-                {"enzo", "3"},
-                {"fernanda", "3"}
+
             },
             new String [] {
-                "Nome", "Acertos"
+                "Nome", "Acertos", "Avaliação"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         tabela.setFocusable(false);
         tabela.setRequestFocusEnabled(false);
-        tabela.setRowHeight(30);
+        tabela.setRowHeight(40);
         tabela.setSelectionBackground(new java.awt.Color(7, 15, 43));
         tabela.setSelectionForeground(new java.awt.Color(239, 236, 236));
-        tabela.setShowHorizontalLines(true);
-        tabela.setShowVerticalLines(true);
+        tabela.setShowGrid(true);
         tabela.getTableHeader().setResizingAllowed(false);
         tabela.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(tabela);
+        if (tabela.getColumnModel().getColumnCount() > 0) {
+            tabela.getColumnModel().getColumn(0).setMaxWidth(1000);
+            tabela.getColumnModel().getColumn(1).setMaxWidth(100);
+            tabela.getColumnModel().getColumn(2).setMaxWidth(100);
+        }
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 510, 330));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 580, 330));
 
         btnInicio.setBackground(new java.awt.Color(224, 77, 1));
         btnInicio.setFont(new java.awt.Font("Nasalization Rg", 1, 40)); // NOI18N
@@ -108,6 +125,9 @@ public class Tabela extends javax.swing.JDialog {
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt2.setText("Voltar ao Início");
         getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 560, 210, -1));
+
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte1.png"))); // NOI18N
+        getContentPane().add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 500, -1, -1));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
@@ -156,6 +176,7 @@ public class Tabela extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btnInicio;
+    private javax.swing.JLabel img;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable tabela;
     private javax.swing.JLabel txt1;

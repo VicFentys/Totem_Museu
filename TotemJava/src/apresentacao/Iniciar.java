@@ -75,7 +75,7 @@ public class Iniciar extends javax.swing.JDialog {
         });
         getContentPane().add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 180, 60));
 
-        marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte1.png"))); // NOI18N
+        marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte3.png"))); // NOI18N
         getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, -1, -1));
 
         btnSair.setBackground(new java.awt.Color(224, 77, 1));
@@ -119,7 +119,6 @@ public class Iniciar extends javax.swing.JDialog {
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
         Estaticos.resCorretas = 0; // Reseta o contator de respostas corretas para o próximo usuário
-        Estaticos.nome = ""; // Reseta o nome para o próximo usuário
         new Nome(null, true).setVisible(true); // Chama a o painel Nome
         this.dispose();
     }//GEN-LAST:event_btnIniciarActionPerformed

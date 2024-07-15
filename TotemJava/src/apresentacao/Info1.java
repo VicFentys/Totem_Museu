@@ -38,19 +38,19 @@ public class Info1 extends javax.swing.JDialog {
         txt3.setForeground(new java.awt.Color(239, 236, 236));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt3.setText("<html>\n<div style= 'text-align: center'>\n<p>Qual rover explorador foi o primeiro a<br/>\n<p style='margin-top: 10'>aterrissar em Marte?\n");
-        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 800, -1));
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 800, -1));
 
         txt4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt4.setText("<html>\n<div style= 'text-align: center'>\n<p>Composta por um módulo de pouso (Lander), mais tarde batizado de\n<p style='margin-top: 10'>\"Carl Sagan Memorial Station\", e um pequeno robô, chamado <b>Sojourner,</b>\n<p style='margin-top: 10'>a Pathfinder foi lançada em 4 de dezembro de 1996,\n<p style='margin-top: 10'>e chegou em Marte sete meses depois, em 4 de julho de 1997.");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 800, -1));
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 800, -1));
 
         txt5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt5.setForeground(new java.awt.Color(239, 236, 236));
         txt5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt5.setText("<html>\n<div style= 'text-align: center'>\n<p>Equipado com seis rodas, duas câmeras e alguns instrumentos científicos,\n<p style='margin-top: 10'>o <b>Sojourner</b> media 65 cm de comprimento, 48 cm de largura, 30 cm de\n<p style='margin-top: 10'>altura e pesava 11,5 Kg.");
-        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 800, -1));
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 800, -1));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
@@ -71,7 +71,7 @@ public class Info1 extends javax.swing.JDialog {
                 btnProximaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 160, 80));
+        getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 160, 70));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
