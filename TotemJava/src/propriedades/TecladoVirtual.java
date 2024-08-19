@@ -80,7 +80,7 @@ public class TecladoVirtual {
         frame.pack(); // Configura o JFrame para usar seu tamanho mínimo
     }
     
-    public void setTextFieldAtual(JTextField textField) { // Cria o método que será usado nas perguntas
+    public void setTextFieldAtual(JTextField textField) { // Cria o método que será usado no nome
         this.textFieldAtual = textField;
     }
     

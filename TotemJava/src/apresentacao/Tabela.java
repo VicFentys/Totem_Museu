@@ -14,20 +14,20 @@ public class Tabela extends javax.swing.JDialog {
         addLinha();
     }
     
-    public ArrayList Lista() {
+    public ArrayList Lista() { // Cria uma lista para cada jogador
         ArrayList<Jogador> list = new  ArrayList<>();
         Jogador j1 = new Jogador("fernando", 2, 7);
         Jogador j2 = new Jogador("maria", 3, 9);
         Jogador j3 = new Jogador("douglas", 5, 6);
         Jogador j4 = new Jogador(Estaticos.nome, Estaticos.resCorretas, Estaticos.AVALIACAO);
-        list.add(j1); // Comando para adicionar os valores 
+        list.add(j1);
         list.add(j2);
         list.add(j3);
         list.add(j4);
         return list;
     }
     
-    public void addLinha() {
+    public void addLinha() { // Adiciona as linhas na tabela
         DefaultTableModel modelo = (DefaultTableModel) tabela.getModel();
         ArrayList<Jogador> list = Lista();
         Object rowData[] = new Object[4];
