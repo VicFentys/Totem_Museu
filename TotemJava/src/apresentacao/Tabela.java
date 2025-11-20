@@ -11,32 +11,83 @@ public class Tabela extends javax.swing.JDialog {
     public Tabela(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        addLinha();
+        carregarTabela();
     }
     
-    public ArrayList Lista() { // Cria uma lista para cada jogador
-        ArrayList<Jogador> list = new  ArrayList<>();
-        Jogador j1 = new Jogador("fernando", 2, 7);
-        Jogador j2 = new Jogador("maria", 3, 9);
-        Jogador j3 = new Jogador("douglas", 5, 6);
-        Jogador j4 = new Jogador(Estaticos.nome, Estaticos.resCorretas, Estaticos.AVALIACAO);
-        list.add(j1);
-        list.add(j2);
-        list.add(j3);
-        list.add(j4);
-        return list;
-    }
-    
-    public void addLinha() { // Adiciona as linhas na tabela
-        DefaultTableModel modelo = (DefaultTableModel) tabela.getModel();
-        ArrayList<Jogador> list = Lista();
-        Object rowData[] = new Object[4];
-        for (int i = 0; i < list.size(); i++) {
-            rowData[0] = list.get(i).getNome();
-            rowData[1] = list.get(i).getTotal();
-            rowData[2] = list.get(i).getAva();
-            modelo.addRow(rowData);
+    private void carregarTabela() {
+        String nome = Estaticos.nome;
+        int pontos = Estaticos.resCorretas;
+        int avaliacao = Estaticos.AVALIACAO;
+        
+        System.out.printf("Carregando tabela - Nome: %s | Pontos: %d | Feedback: %d%n", 
+                         nome, pontos, avaliacao); // Debug
+        
+        ArrayList<Jogador> listaJogadores = GameData.loadGameData(); // Cria a lista com as informações salvas
+        
+        // Adiciona alguns jogadores predefinidos
+        if (listaJogadores.isEmpty()) {
+            listaJogadores.add(new Jogador("fernando", 2, 7));
+            listaJogadores.add(new Jogador("maria", 3, 9));
+            listaJogadores.add(new Jogador("douglas", 5, 6));
         }
+        
+        // Adiciona o novo jogador
+        if (nome != null && !nome.isEmpty()) {
+            listaJogadores.add(new Jogador(nome, pontos, avaliacao));
+        }
+        
+        GameData.saveGameData(listaJogadores); // Salva a tabela com os players
+        
+        atualizarTabela(listaJogadores); // Atualiza a tabela
+        
+        medias(listaJogadores); // Calcula a media da pontuação e avaliação dos jogadores
+        
+        resetarDadosJogador(); // Reseta as informações do jogador
+    }
+    
+    private void atualizarTabela(ArrayList<Jogador> jogadores) {
+        DefaultTableModel modelo = (DefaultTableModel) tabela.getModel(); // Define a tabela a ser usada
+        modelo.setRowCount(0); // Limpa a contagem de linhas da tabela
+        
+        for (Jogador j : jogadores) { // Adiciona uma linha para cada jogador
+            modelo.addRow(new Object[]{
+                    j.getNome(),
+                    j.getTotal(),
+                    j.getAva()
+            });
+        }
+    }
+    
+    private void medias(ArrayList<Jogador> jogadores) {
+        int totalPontos = 0;
+        int totalAvaliacoes = 0;
+
+        // Soma dos valores do jogador atual com os dos outros jogadores
+        for (Jogador j : jogadores) {
+            totalPontos += j.getTotal();
+            totalAvaliacoes += j.getAva();
+        }
+
+        // Calcula médias
+        double mediaPontos = (double) totalPontos / jogadores.size();
+        double mediaAvaliacoes = (double) totalAvaliacoes / jogadores.size();
+
+        // Formata para 1 casa decimal
+        String textoMediasPontos = String.format("Média de acertos: %.1f", 
+                                         mediaPontos);
+        String textoMediasAva = String.format("Média de avaliação: %.1f", 
+                                         mediaAvaliacoes);
+
+        // Atualiza o JLabel
+        txt3.setText(textoMediasPontos);
+        txt4.setText(textoMediasAva);
+    }
+    
+    private void resetarDadosJogador() {
+        Estaticos.nome = null;
+        Estaticos.resCorretas = 0;
+        Estaticos.AVALIACAO = 0;
+        System.out.println("Dados resetados!"); // Debug
     }
 
     @SuppressWarnings("unchecked")
@@ -48,6 +99,8 @@ public class Tabela extends javax.swing.JDialog {
         tabela = new javax.swing.JTable();
         btnInicio = new javax.swing.JButton();
         txt2 = new javax.swing.JLabel();
+        txt3 = new javax.swing.JLabel();
+        txt4 = new javax.swing.JLabel();
         img = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
@@ -79,7 +132,15 @@ public class Tabela extends javax.swing.JDialog {
             new String [] {
                 "Nome", "Acertos", "Avaliação"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tabela.setFocusable(false);
         tabela.setRequestFocusEnabled(false);
         tabela.setRowHeight(40);
@@ -88,6 +149,7 @@ public class Tabela extends javax.swing.JDialog {
         tabela.setShowGrid(true);
         tabela.getTableHeader().setResizingAllowed(false);
         tabela.getTableHeader().setReorderingAllowed(false);
+        tabela.setUpdateSelectionOnSort(false);
         jScrollPane3.setViewportView(tabela);
         if (tabela.getColumnModel().getColumnCount() > 0) {
             tabela.getColumnModel().getColumn(0).setMaxWidth(1000);
@@ -118,16 +180,28 @@ public class Tabela extends javax.swing.JDialog {
                 btnInicioActionPerformed(evt);
             }
         });
-        getContentPane().add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, 150, -1));
+        getContentPane().add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 500, 150, -1));
 
         txt2.setFont(new java.awt.Font("Nasalization Rg", 0, 18)); // NOI18N
         txt2.setForeground(new java.awt.Color(224, 77, 1));
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt2.setText("Voltar ao Início");
-        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 560, 210, -1));
+        getContentPane().add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 460, 190, -1));
+
+        txt3.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
+        txt3.setForeground(new java.awt.Color(224, 77, 1));
+        txt3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt3.setText("Média de pontuação:");
+        getContentPane().add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 360, -1));
+
+        txt4.setFont(new java.awt.Font("Nasalization Rg", 0, 24)); // NOI18N
+        txt4.setForeground(new java.awt.Color(224, 77, 1));
+        txt4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        txt4.setText("Média de avaliação:");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, 360, -1));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte1.png"))); // NOI18N
-        getContentPane().add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 500, -1, -1));
+        getContentPane().add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 480, -1, -1));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
@@ -181,5 +255,7 @@ public class Tabela extends javax.swing.JDialog {
     private javax.swing.JTable tabela;
     private javax.swing.JLabel txt1;
     private javax.swing.JLabel txt2;
+    private javax.swing.JLabel txt3;
+    private javax.swing.JLabel txt4;
     // End of variables declaration//GEN-END:variables
 }

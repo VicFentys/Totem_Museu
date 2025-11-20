@@ -36,7 +36,7 @@ public class Erro extends javax.swing.JDialog {
         btnOk.setFont(new java.awt.Font("Nasalization Rg", 1, 20)); // NOI18N
         btnOk.setForeground(new java.awt.Color(37, 29, 58));
         btnOk.setText("OK");
-        btnOk.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnOk.setBorder(null);
         btnOk.setBorderPainted(false);
         btnOk.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnOk.setFocusPainted(false);

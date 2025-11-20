@@ -74,11 +74,58 @@
           <Color blue="ec" green="ec" red="ef" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: center&apos;&gt;&#xa;&lt;p&gt;&lt;b&gt;Criada pela NASA&lt;/b&gt;, a miss&#xe3;o Mars 2020 enviou para l&#xe1; o rover&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;Perseverance, com o principal objetivo de determinar o potencial de&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;vida antiga em Marte. Para isso, o rob&#xf4; buscar&#xe1; sinais de condi&#xe7;&#xf5;es&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;habit&#xe1;veis no antigo Planeta Vermelho, al&#xe9;m de procurar por&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;bioassinaturas de vida microbiana que possa ter existido quando havia  &#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;&#xe1;gua por l&#xe1;. A miss&#xe3;o pousou com sucesso em fevereiro de 2021."/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: justify&apos;&gt;&#xa;&lt;p&gt;&lt;b&gt;Criada pela NASA&lt;/b&gt;, a miss&#xe3;o Mars 2020 enviou para l&#xe1; o rover&#xa;&lt;b&gt;Perseverance&lt;/b&gt;, com o principal objetivo de determinar o potencial de&#xa;vida antiga em Marte."/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="220" width="800" height="-1"/>
+          <AbsoluteConstraints x="20" y="190" width="410" height="120"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ec" green="ec" red="ef" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: justify&apos;&gt;&#xa;&lt;p&gt;Para isso, o rob&#xf4; buscar&#xe1; sinais de condi&#xe7;&#xf5;es&#xa;habit&#xe1;veis no antigo Planeta Vermelho, al&#xe9;m de procurar por&#xa;bioassinaturas de vida microbiana que possa ter existido quando havia  &#xa;&#xe1;gua por l&#xe1;. A miss&#xe3;o pousou com sucesso em fevereiro de 2021."/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="20" y="310" width="410" height="160"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt6">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ec" green="ec" red="ef" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: justify&apos;&gt;&#xa;&lt;p&gt;Perseverance - 2020 (nasa.gov)"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="480" y="410" width="260" height="60"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="imgSpiritOpportunity">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/Perseverance.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="450" y="220" width="330" height="200"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -91,9 +138,7 @@
           <Image iconType="3" name="/imagens/direita.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder thickness="3"/>
-          </Border>
+          <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -120,7 +165,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="620" y="450" width="-1" height="-1"/>
+          <AbsoluteConstraints x="620" y="470" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

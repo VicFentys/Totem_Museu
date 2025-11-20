@@ -1,0 +1,5 @@
+fernando, 2, 7
+maria, 3, 9
+douglas, 5, 6
+victor, 3, 8
+teste, 1, 4

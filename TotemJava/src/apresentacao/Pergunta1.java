@@ -74,7 +74,7 @@ public class Pergunta1 extends javax.swing.JDialog {
         btnEnviar.setFont(new java.awt.Font("Nasalization Rg", 0, 30)); // NOI18N
         btnEnviar.setForeground(new java.awt.Color(37, 29, 58));
         btnEnviar.setText("Enviar");
-        btnEnviar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnEnviar.setBorder(null);
         btnEnviar.setBorderPainted(false);
         btnEnviar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEnviar.setFocusPainted(false);

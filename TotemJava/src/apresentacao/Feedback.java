@@ -53,7 +53,7 @@ public class Feedback extends javax.swing.JDialog {
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
-        btnProxima.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnProxima.setBorder(null);
         btnProxima.setBorderPainted(false);
         btnProxima.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnProxima.setFocusPainted(false);

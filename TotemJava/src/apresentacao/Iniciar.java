@@ -2,7 +2,6 @@ package apresentacao;
 
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import java.awt.*;
-import propriedades.*;
 
 public class Iniciar extends javax.swing.JDialog {
  
@@ -56,7 +55,7 @@ public class Iniciar extends javax.swing.JDialog {
         btnIniciar.setFont(new java.awt.Font("Nasalization Rg", 1, 40)); // NOI18N
         btnIniciar.setForeground(new java.awt.Color(37, 29, 58));
         btnIniciar.setText("Iniciar");
-        btnIniciar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnIniciar.setBorder(null);
         btnIniciar.setBorderPainted(false);
         btnIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIniciar.setFocusPainted(false);
@@ -82,7 +81,7 @@ public class Iniciar extends javax.swing.JDialog {
         btnSair.setFont(new java.awt.Font("Nasalization Rg", 1, 24)); // NOI18N
         btnSair.setForeground(new java.awt.Color(37, 29, 58));
         btnSair.setText("SAIR");
-        btnSair.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnSair.setBorder(null);
         btnSair.setBorderPainted(false);
         btnSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSair.setFocusPainted(false);
@@ -118,8 +117,7 @@ public class Iniciar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnIniciarMouseExited
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        Estaticos.resCorretas = 0; // Reseta o contator de respostas corretas para o próximo usuário
-        new Nome(null, true).setVisible(true); // Chama a o painel Nome
+        new Nome(null, true).setVisible(true); // Chama o painel Nome
         this.dispose();
     }//GEN-LAST:event_btnIniciarActionPerformed
 

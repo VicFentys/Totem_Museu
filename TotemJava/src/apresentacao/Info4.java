@@ -17,6 +17,9 @@ public class Info4 extends javax.swing.JDialog {
         txt1 = new javax.swing.JLabel();
         txt3 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
+        txt5 = new javax.swing.JLabel();
+        txt6 = new javax.swing.JLabel();
+        imgSpiritOpportunity = new javax.swing.JLabel();
         btnProxima = new javax.swing.JButton();
         marte = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
@@ -43,12 +46,28 @@ public class Info4 extends javax.swing.JDialog {
         txt4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(239, 236, 236));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt4.setText("<html>\n<div style= 'text-align: center'>\n<p><b>Criada pela NASA</b>, a missão Mars 2020 enviou para lá o rover\n<p style='margin-top: 10'>Perseverance, com o principal objetivo de determinar o potencial de\n<p style='margin-top: 10'>vida antiga em Marte. Para isso, o robô buscará sinais de condições\n<p style='margin-top: 10'>habitáveis no antigo Planeta Vermelho, além de procurar por\n<p style='margin-top: 10'>bioassinaturas de vida microbiana que possa ter existido quando havia  \n<p style='margin-top: 10'>água por lá. A missão pousou com sucesso em fevereiro de 2021.");
-        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 800, -1));
+        txt4.setText("<html>\n<div style= 'text-align: justify'>\n<p><b>Criada pela NASA</b>, a missão Mars 2020 enviou para lá o rover\n<b>Perseverance</b>, com o principal objetivo de determinar o potencial de\nvida antiga em Marte.");
+        getContentPane().add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 410, 120));
+
+        txt5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txt5.setForeground(new java.awt.Color(239, 236, 236));
+        txt5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt5.setText("<html>\n<div style= 'text-align: justify'>\n<p>Para isso, o robô buscará sinais de condições\nhabitáveis no antigo Planeta Vermelho, além de procurar por\nbioassinaturas de vida microbiana que possa ter existido quando havia  \nágua por lá. A missão pousou com sucesso em fevereiro de 2021.");
+        getContentPane().add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 410, 160));
+
+        txt6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txt6.setForeground(new java.awt.Color(239, 236, 236));
+        txt6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt6.setText("<html>\n<div style= 'text-align: justify'>\n<p>Perseverance - 2020 (nasa.gov)");
+        getContentPane().add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, 260, 60));
+
+        imgSpiritOpportunity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        imgSpiritOpportunity.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Perseverance.jpg"))); // NOI18N
+        getContentPane().add(imgSpiritOpportunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 330, 200));
 
         btnProxima.setBackground(new java.awt.Color(224, 77, 1));
         btnProxima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/direita.png"))); // NOI18N
-        btnProxima.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        btnProxima.setBorder(null);
         btnProxima.setBorderPainted(false);
         btnProxima.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnProxima.setFocusPainted(false);
@@ -68,7 +87,7 @@ public class Info4 extends javax.swing.JDialog {
         getContentPane().add(btnProxima, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 160, 70));
 
         marte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/marte2.png"))); // NOI18N
-        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, -1, -1));
+        getContentPane().add(marte, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, -1, -1));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/background.jpg"))); // NOI18N
@@ -116,9 +135,12 @@ public class Info4 extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
     private javax.swing.JButton btnProxima;
+    private javax.swing.JLabel imgSpiritOpportunity;
     private javax.swing.JLabel marte;
     private javax.swing.JLabel txt1;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;
+    private javax.swing.JLabel txt5;
+    private javax.swing.JLabel txt6;
     // End of variables declaration//GEN-END:variables
 }

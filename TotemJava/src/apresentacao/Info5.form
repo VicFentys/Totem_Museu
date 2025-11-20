@@ -74,11 +74,58 @@
           <Color blue="ec" green="ec" red="ef" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: center&apos;&gt;&#xa;&lt;p&gt;O Curiosity era o maior e mais robusto rover j&#xe1; enviado a Marte em sua&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;&#xe9;poca, perdendo apenas para o novo rover Perseverance.&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;Foi lan&#xe7;ado em novembro de 2011 e &lt;b&gt;aterrissou&lt;/b&gt;&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;&lt;b&gt;em Marte em 5 de agosto de 2012,&lt;/b&gt; na regi&#xe3;o da cratera Gale.&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;Foi o primeiro pouso realizado em Marte com a ajuda de um paraquedas&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;e momentos antes do contato com o solo,&#xa;&lt;p style=&apos;margin-top: 10&apos;&gt;disparou foguetes para diminuir a velocidade de descida."/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: justify&apos;&gt;&#xa;&lt;p&gt;O &lt;b&gt;Curiosity&lt;/b&gt; era o maior e mais robusto rover j&#xe1; enviado a Marte em sua&#xa;&#xe9;poca, perdendo apenas para o novo rover Perseverance.&#xa;Foi lan&#xe7;ado em novembro de 2011 e &lt;b&gt;aterrissou&lt;/b&gt;&#xa;&lt;b&gt;em Marte em 5 de agosto de 2012,&lt;/b&gt; na regi&#xe3;o da cratera Gale."/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="200" width="800" height="-1"/>
+          <AbsoluteConstraints x="20" y="190" width="410" height="160"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ec" green="ec" red="ef" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: justify&apos;&gt;&#xa;&lt;p&gt;Foi o primeiro pouso realizado em Marte com a ajuda de um paraquedas&#xa;e momentos antes do contato com o solo,&#xa;disparou foguetes para diminuir a velocidade de descida."/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="20" y="350" width="410" height="110"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="txt6">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ec" green="ec" red="ef" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;div style= &apos;text-align: justify&apos;&gt;&#xa;&lt;p&gt;Curiosity - 2012 (nasa.gov)"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="480" y="410" width="260" height="60"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="imgCuriosity">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagens/Curiosity.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="450" y="220" width="330" height="200"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -91,9 +138,7 @@
           <Image iconType="3" name="/imagens/direita.png"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder thickness="3"/>
-          </Border>
+          <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
