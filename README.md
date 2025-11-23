@@ -1,4 +1,4 @@
-# Totem_Museu
+# Totem Museu - Exposição NASA fictícia
 Projeto para Atividades Praticas Supervisionadas (APS) referente ao terceiro semestre da faculdade de Ciência da Computação.
 
 Tela Inicial:
